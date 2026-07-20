@@ -1,0 +1,3 @@
+canonical,mode,module,input_semantics,input_unit_bits,card_unit_bits,standard_packed_order,library_packed_orders,transport_names,unicode_codec_registered
+ECMA-44-7BIT-CARD-RAW,seven_bit,Iconvex.Specs.ECMA44,raw_code_combination,7,12,,msb|lsb,ECMA-44-7BIT-CARD-RAW-PACKED-MSB|ECMA-44-7BIT-CARD-RAW-PACKED-LSB|ECMA-44-7BIT-CARD-RAW-16BE|ECMA-44-7BIT-CARD-RAW-16LE,false
+ECMA-44-8BIT-CARD-RAW,eight_bit,Iconvex.Specs.ECMA44,raw_code_combination,8,12,,msb|lsb,ECMA-44-8BIT-CARD-RAW-PACKED-MSB|ECMA-44-8BIT-CARD-RAW-PACKED-LSB|ECMA-44-8BIT-CARD-RAW-16BE|ECMA-44-8BIT-CARD-RAW-16LE,false

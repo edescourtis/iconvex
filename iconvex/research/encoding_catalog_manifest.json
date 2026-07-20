@@ -1,0 +1,375 @@
+{
+  "catalog_entries": 1626,
+  "generated_at": "2026-07-18T09:26:59+00:00",
+  "gnu_libiconv_1_19_high_confidence_unsupported_entries": 925,
+  "gnu_libiconv_1_19_unsupported_entries": 1426,
+  "implementation_disposition_counts": {
+    "binary_transform": 5,
+    "codec_gap": 79,
+    "coding_technique": 1,
+    "compression_transform": 2,
+    "control_standard": 2,
+    "control_value": 2,
+    "encoding_family": 24,
+    "entity_mapping": 1,
+    "font_identity": 9,
+    "implemented": 1331,
+    "implemented_property_token_mapping": 4,
+    "internal_component": 6,
+    "mapping_notation": 1,
+    "non_text_coding_system": 7,
+    "placeholder": 1,
+    "platform_adapter": 3,
+    "property_token_mapping_gap": 0,
+    "registry_component": 1,
+    "repertoire_abstraction": 2,
+    "repertoire_profile": 15,
+    "research_candidate": 121,
+    "retired_invalid": 1,
+    "terminal_protocol": 1,
+    "text_transform": 1,
+    "unicode_representation_profile": 1,
+    "unicode_sequence_mechanism": 1,
+    "unicode_sequence_profile": 1,
+    "visual_signaling_system": 1,
+    "withdrawn_unassigned_part": 1,
+    "writing_system": 1
+  },
+  "retrievals": {
+    "https://api.github.com/repos/python/cpython/contents/Lib/encodings?per_page=1000": {
+      "bytes": 100610,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://api.github.com/repos/python/cpython/contents/Lib/encodings?per_page=1000",
+      "sha256": "9980c848ebb00d8df88e8260cf2713997bcf398d68195a517db1bfb72496183d"
+    },
+    "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3ACalculator_character_sets&cmlimit=max&format=json": {
+      "bytes": 470,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3ACalculator_character_sets&cmlimit=max&format=json",
+      "sha256": "81e86ab68fc72a904e59f3c84bd9ec4ea8d79b94d0b373836f70a93760f61617"
+    },
+    "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3ACharacter_sets&cmlimit=max&format=json": {
+      "bytes": 14538,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3ACharacter_sets&cmlimit=max&format=json",
+      "sha256": "2cfdc9af14937c499ee320b7d638832f62952393a1511a7b4ee95a3b6e692e99"
+    },
+    "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AChinese_character_encodings&cmlimit=max&format=json": {
+      "bytes": 905,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AChinese_character_encodings&cmlimit=max&format=json",
+      "sha256": "5c2267a3bff585ed233fa1556766b58604806cf831e8a4fa084987d242fda348"
+    },
+    "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AClassic_Mac_OS_character_encodings&cmlimit=max&format=json": {
+      "bytes": 1957,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AClassic_Mac_OS_character_encodings&cmlimit=max&format=json",
+      "sha256": "d9d6a4f7c84bb9f7aea0d93e46c64bcb1dada0efc3817a3211b57fdbd9effe2d"
+    },
+    "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3ADOS_code_pages&cmlimit=max&format=json": {
+      "bytes": 2435,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3ADOS_code_pages&cmlimit=max&format=json",
+      "sha256": "3d32b60820ccb45c1caef03758f2ed7ae53710903cee3e8939eae7933a1f2d09"
+    },
+    "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AEBCDIC_code_pages&cmlimit=max&format=json": {
+      "bytes": 445,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AEBCDIC_code_pages&cmlimit=max&format=json",
+      "sha256": "8b7a1ebd50534adaed6699a4e9455363395bcf195a7bfa939bcb8c0cc00cf7f8"
+    },
+    "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AEncodings_of_Asian_languages&cmlimit=max&format=json": {
+      "bytes": 1538,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AEncodings_of_Asian_languages&cmlimit=max&format=json",
+      "sha256": "571a8c7bc41c9286b18acb709922b78dc80ab7448df820e59c0bdd7a4e9cf0c1"
+    },
+    "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AIBM_AIX_code_pages&cmlimit=max&format=json": {
+      "bytes": 2347,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AIBM_AIX_code_pages&cmlimit=max&format=json",
+      "sha256": "93848b7d77e577fe497860ba953ed5afc08655396706a692aae60cbda16d5044"
+    },
+    "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AISO%2FIEC_8859&cmlimit=max&format=json": {
+      "bytes": 1228,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AISO%2FIEC_8859&cmlimit=max&format=json",
+      "sha256": "8012eb5030961f9e57497c98f3c0c311c38a33b547633e527566aec2a97c76d9"
+    },
+    "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AUnicode_Transformation_Formats&cmlimit=max&format=json": {
+      "bytes": 1607,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AUnicode_Transformation_Formats&cmlimit=max&format=json",
+      "sha256": "b0c9abec1a9b137651f4a8c4126d71dd00b594ab2cf53748e8f47d1be15a516f"
+    },
+    "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AWindows_code_pages&cmlimit=max&format=json": {
+      "bytes": 2690,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=Category%3AWindows_code_pages&cmlimit=max&format=json",
+      "sha256": "97e0e08f1718d8f759e9d17215b4a7ad75463a73ef9d171a7c516b3b19ca34ae"
+    },
+    "https://en.wikipedia.org/wiki/List_of_information_system_character_sets": {
+      "bytes": 95807,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://en.wikipedia.org/wiki/List_of_information_system_character_sets",
+      "sha256": "ed9cefd88758fb283ea26c80a2025e75e41b1f95af37574d64dadcedd78371ba"
+    },
+    "https://encoding.spec.whatwg.org/encodings.json": {
+      "bytes": 8913,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://encoding.spec.whatwg.org/encodings.json",
+      "sha256": "078212b3697f60b81225b6671bd9da2604497abff0aa8e96e4d46605c02ac9e7"
+    },
+    "https://homepage.cs.uiowa.edu/~jones/cards/codes.html": {
+      "bytes": 31044,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://homepage.cs.uiowa.edu/~jones/cards/codes.html",
+      "sha256": "824e61a9687f7fa0b9c9dd3c966ca02020bf8af1ab6671e9bd2e131f22f47b18"
+    },
+    "https://learn.microsoft.com/en-us/windows/win32/intl/code-page-identifiers": {
+      "bytes": 60036,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://learn.microsoft.com/en-us/windows/win32/intl/code-page-identifiers",
+      "sha256": "e2a8c631f62beb34c1e937d58a68c46576430aee2d1fac52e1610587bd6e55f1"
+    },
+    "https://query.wikidata.org/sparql?format=json&query=SELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3FitemDescription%20%3Fclass%20%3FclassLabel%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP31%20%3Fclass.%0A%20%20%3Fclass%20wdt%3AP279%2A%20wd%3AQ184759.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D": {
+      "bytes": 221707,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://query.wikidata.org/sparql?format=json&query=SELECT%20DISTINCT%20%3Fitem%20%3FitemLabel%20%3FitemDescription%20%3Fclass%20%3FclassLabel%20WHERE%20%7B%0A%20%20%3Fitem%20wdt%3AP31%20%3Fclass.%0A%20%20%3Fclass%20wdt%3AP279%2A%20wd%3AQ184759.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D",
+      "sha256": "45b134df2ff48e838fc457df73c269258a78965f274ed0c92b76dd05b3f39ac9"
+    },
+    "https://raw.githubusercontent.com/bminor/glibc/master/iconvdata/gconv-modules": {
+      "bytes": 3916,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://raw.githubusercontent.com/bminor/glibc/master/iconvdata/gconv-modules",
+      "sha256": "c5b3ea3d8138394c288f05074ebb4b09ca14c34583ac40349599c3bfa6f9afab"
+    },
+    "https://raw.githubusercontent.com/bminor/glibc/master/iconvdata/gconv-modules-extra.conf": {
+      "bytes": 53974,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://raw.githubusercontent.com/bminor/glibc/master/iconvdata/gconv-modules-extra.conf",
+      "sha256": "22562b116ef77872fed7b72f10d35de855b53d0b315180e20162e81cd05f1f4c"
+    },
+    "https://raw.githubusercontent.com/openjdk/jdk/master/make/data/charsetmapping/charsets": {
+      "bytes": 44031,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://raw.githubusercontent.com/openjdk/jdk/master/make/data/charsetmapping/charsets",
+      "sha256": "f3157c318b916709417738e34e8c008e923dcaec3d49b519b743f89c23b4398f"
+    },
+    "https://raw.githubusercontent.com/python/cpython/main/Lib/encodings/aliases.py": {
+      "bytes": 18502,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://raw.githubusercontent.com/python/cpython/main/Lib/encodings/aliases.py",
+      "sha256": "2a6b5d2145fef38056cef67714db63fec7c29f10bd4cef8c1d1b22654cdb0549"
+    },
+    "https://raw.githubusercontent.com/unicode-org/icu/main/icu4c/source/data/mappings/convrtrs.txt": {
+      "bytes": 78343,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://raw.githubusercontent.com/unicode-org/icu/main/icu4c/source/data/mappings/convrtrs.txt",
+      "sha256": "29340d12f664416d51c9b9d8d34e6364a10b456e668eb3155fd5f59beaf743e9"
+    },
+    "https://web.archive.org/web/20240218150849id_/https://itscj.ipsj.or.jp/english/vbcqpr00000004qn-att/ISO-IR.pdf": {
+      "bytes": 389234,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://web.archive.org/web/20240218150849id_/https://itscj.ipsj.or.jp/english/vbcqpr00000004qn-att/ISO-IR.pdf",
+      "sha256": "543c9d22ed6a2a46d754535cc8aa59a733cc75ba6fa09c52246620d5b900e2f9"
+    },
+    "https://www.iana.org/assignments/character-sets/character-sets-1.csv": {
+      "bytes": 40951,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.iana.org/assignments/character-sets/character-sets-1.csv",
+      "sha256": "d785460f17c5bcdd9d4841ccb8ba7c08342b9e647d15f021ba73fcca04903673"
+    },
+    "https://www.ibm.com/docs/en/i/7.4.0?topic=information-ccsid-values-defined-i": {
+      "bytes": 58620,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.ibm.com/docs/en/i/7.4.0?topic=information-ccsid-values-defined-i",
+      "sha256": "d0682e71d66de77bd518cda1e82377474bdb78cd6dd87b0c17cbccdc25c67dfb"
+    },
+    "https://www.kermitproject.org/k95charsets.html": {
+      "bytes": 7737,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.kermitproject.org/k95charsets.html",
+      "sha256": "192e228cf01704bf54b5859b32b9949b865379350f0bb7781ce2b8e0c35f1805"
+    },
+    "https://www.rfc-editor.org/rfc/rfc1345.txt": {
+      "bytes": 249737,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.rfc-editor.org/rfc/rfc1345.txt",
+      "sha256": "d1a4b6a3d6514f8ea96b74e49af40edae5c8edfcc1b1e7d9d7caebc9d622e3b0"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/": {
+      "bytes": 2041,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/",
+      "sha256": "44801dc43fa68d325907a81b5f136ed8f65ff11df9f43e5dd86c44575e786cd8"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/JIS/": {
+      "bytes": 1900,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/JIS/",
+      "sha256": "6b25c26872d996ff18245f3ccbd2fa431f8647bd4dab9c32d50b2b587d825ed6"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/KSC/": {
+      "bytes": 2304,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/KSC/",
+      "sha256": "0c3e0a14710f14c8a728e1ee02d83fa009aa2196cdb44226ba6723ebf76d1d0e"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/OTHER/": {
+      "bytes": 1496,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/OTHER/",
+      "sha256": "a1c9f079d0ab2f76e10cbd95e5ee0cdcd3c6e0675d7f4ba5bc30f17cf2b093c2"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/TCVN/": {
+      "bytes": 1500,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/TCVN/",
+      "sha256": "934deb432246e38e3271aa4542e7735746c87fe261323dab28248b950a260477"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/": {
+      "bytes": 2212,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/",
+      "sha256": "75610ba30295e0953cbc24f75ebb18d62c3c1b68d78f918ba0064ac8a73c38da"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/ADOBE/": {
+      "bytes": 1876,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/ADOBE/",
+      "sha256": "c300e2bfd63d2e7c9c25a90d694ccee2c3b2a2dfd54c5f16a778c6ade59907d6"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/": {
+      "bytes": 6868,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/APPLE/",
+      "sha256": "2bbec741abf153ad28f7ddc253f66c1e45513c78a3b33d18e17e1a3fedb21cb7"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/IBM/": {
+      "bytes": 1296,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/IBM/",
+      "sha256": "43293bc320e1cff2caaf3d2211bb616c9878d20b05796847b554171306a7f8f0"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/": {
+      "bytes": 2055,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/",
+      "sha256": "e5d77ee44bf50f35bf14b69195cef99048fd98a481134ecfeb71a3e62af41a2f"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/EBCDIC/": {
+      "bytes": 1881,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/EBCDIC/",
+      "sha256": "5aa21393a9cbfbd4fe15d4887bd65de344e1e26e12613ebce2dd392fd761b92c"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/MAC/": {
+      "bytes": 2284,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/MAC/",
+      "sha256": "9edc8d1658a8f29b500153a81213d19cd8e4631adf0543ffad5ee1113927f2cb"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/PC/": {
+      "bytes": 4227,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/PC/",
+      "sha256": "5756a2a0f557f1ea2c777554d8c9b70dcf3029da4349c4ea3e2fee97ec67d1e5"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/": {
+      "bytes": 3858,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/",
+      "sha256": "aa62841d94054982f5ff04640c0ab1d35b4c37f1b00dc996f79f01c4bb0c9b2d"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/": {
+      "bytes": 4411,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/",
+      "sha256": "88cbfe5c5bfd6e6932ab69a6478ab390206fdb26dedf1e66ba79d318e241b8b1"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/MISC/": {
+      "bytes": 3695,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MISC/",
+      "sha256": "eb2b39bbf922cb2c95004a4a8c906b83830572f3159541e15ad44a43ccfaaa1f"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/MISC/DatedVersions/": {
+      "bytes": 1320,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/MISC/DatedVersions/",
+      "sha256": "00d154d60664e97e225354a20632ffa0eed74a6ae04e04010951904efa08d481"
+    },
+    "https://www.unicode.org/Public/MAPPINGS/VENDORS/NEXT/": {
+      "bytes": 1281,
+      "cached": true,
+      "content_type": "cached",
+      "final_url": "https://www.unicode.org/Public/MAPPINGS/VENDORS/NEXT/",
+      "sha256": "d421bb852eaf70173a420aa45aae349f79efc596c4bc4acc2a4b24c309dcb526"
+    }
+  },
+  "source_record_counts": {
+    "glibc": 272,
+    "gnu_libiconv": 200,
+    "iana": 258,
+    "ibm_i": 236,
+    "icu": 365,
+    "iso_ir": 152,
+    "kermit": 91,
+    "microsoft": 152,
+    "openjdk": 175,
+    "punched_cards": 14,
+    "python": 113,
+    "rfc1345": 145,
+    "supplement": 134,
+    "unicode_mappings": 110,
+    "whatwg": 40,
+    "wikidata": 362,
+    "wikipedia": 468,
+    "wikipedia_historical": 23
+  }
+}

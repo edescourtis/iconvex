@@ -1,0 +1,3 @@
+profile,codepoint,unicode_name,punch_rows,mask_hex,canonical_encode,decode_accepted,source
+"CDC-6000-STANDARD-HOLLERITH-1970","U+2228","LOGICAL OR","11+8+2","0x482","no","yes","footnote: 0+11 is equivalent to 11+8+2"
+"CDC-6000-STANDARD-HOLLERITH-1970","U+003C","LESS-THAN SIGN","12+8+2","0x882","no","yes","footnote: 0+12 is equivalent to 12+8+2"

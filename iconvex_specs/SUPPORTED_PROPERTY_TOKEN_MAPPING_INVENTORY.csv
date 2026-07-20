@@ -1,0 +1,5 @@
+mapping_name,module,unicode_property,profile,assigned_tokens,reverse_scalars,grammar,transport,codec_registry,gnu_libiconv_1_19_exact_alias
+UNIHAN-17.0.0-KMAINLANDTELEGRAPH-DECIMAL-TOKEN,Iconvex.Specs.Unihan17MainlandTelegraphDecimalToken,kMainlandTelegraph,exact,7078,7078,[0-9]{4},single_property_token,no,no
+UNIHAN-17.0.0-KTAIWANTELEGRAPH-DECIMAL-TOKEN-READABLE,Iconvex.Specs.Unihan17TaiwanTelegraphDecimalTokenReadable,kTaiwanTelegraph,readable-minimum-token-reverse,9026,9024,[0-9]{4},single_property_token,no,no
+UNIHAN-17.0.0-KTAIWANTELEGRAPH-DECIMAL-TOKEN-LOSSLESS-VPUA-1,Iconvex.Specs.Unihan17TaiwanTelegraphDecimalTokenLosslessVPUA1,kTaiwanTelegraph,lossless-vpua-1,9026,9026,[0-9]{4},single_property_token,no,no
+UNIHAN-17.0.0-KGB3-ROW-CELL-DECIMAL-TOKEN,Iconvex.Specs.Unihan17KGB3RowCellDecimalToken,kGB3,exact,7236,7236,[0-9]{4},single_property_token,no,no

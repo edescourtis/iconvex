@@ -1,0 +1,208 @@
+* ----------------------------------------------------------------------
+* Copyright IBM Corporation 1984. All rights reserved.
+* C-H 3-3220-050       : REGISTRY, Graphic Character Sets and Code Pages
+* Code Page (CPGID)    : 00259
+* Common Name          : Symbols, Set 7
+* Registration Date    : 1984
+* Last Revision Date   :
+* Default Encoding     : 1100
+* Code                 : EBCDIC
+* Maximal Character
+* Set (GCSGID)         : 00340
+* Other GCSGIDs        :
+* ----------------------------------------------------------------------
+*- GCGID --------- GCGID Name ------------------------------------------
+40 SP010000        Space
+41 SP300000        Required Space
+42 SA041000        Equal Sign Superscript
+43 SP101000        Minus Sign Superscript
+44 SA011000        Plus Sign Superscript
+45 SA451000        Infinity Symbol Superscript
+46 GP011000        Pi Superscript
+47 SM731000        Delta Superscript
+48 SM311000        Right Arrow Superscript
+49 SP121000        Slash Superscript
+4A SM060000        Left Bracket
+4B SM340000        Dagger
+4C SA030000        Less Than Sign/Greater Than Sign (Arabic)
+4D SP060000        Left Parenthesis
+4E SM520000        Copyright Symbol
+4F SM230000        Radical/Tape Mark
+50 SA520000        Less Than Or Equal Sign/Greater Than Or Equal Sign (Arabic)
+51 SD310000        Macron Accent
+52 SA181000        Left Angle Bracket Superscript
+53 SA191000        Right Angle Bracket Superscript
+54 SM550000        Prescription Symbol
+55 SA360000        Is Not An Element Of Symbol
+56 SA370000        Therefore Symbol
+57 SM950000        Increase
+58 SM990000        Decrease
+59 SM350000        Double Dagger
+5A SM080000        Right Bracket
+5B SA790000        Product Dot
+5C SA540000        Not Equal Sign
+5D SP070000        Right Parenthesis
+5E SD170000        Diaeresis/Umlaut Accent
+5F SD150000        Circumflex Accent
+60 SP100000        Hyphen/Minus Sign
+61 SA530000        Greater Than Or Equal Sign/Less Than Or Equal Sign (Arabic)
+62 SA320000        Or Symbol
+63 SA330000        And Symbol
+64 SA340000        Parallel Symbol
+65 SA350000        Angle Symbol
+66 SA180000        Left Angle Bracket
+67 SA190000        Right Angle Bracket
+68 SA170000        Minus Or Plus Sign
+69 SM490000        Lozenge
+6A SM500000        Minutes Symbol/Prime Symbol
+6B SM290000        Female Symbol
+6C SM280000        Male Symbol
+6D SP090000        Underline/Continuous Underscore
+6E SA050000        Greater Than Sign/Less Than Sign (Arabic)
+6F SA510000        Integral Symbol
+70 SA380000        Intersection Symbol/Logical Product Symbol
+71 SA390000        Union Symbol/Logical Sum Symbol
+72 SA400000        Is Included In Symbol/Is A Subset Of Symbol
+73 SA410000        Includes Symbol/Is A Superset Of Symbol
+74 SA550000        Circle Plus/Closed Sum
+75 SA420000        Right Angle Symbol
+76
+77 SA560000        Circle x/Closed Product
+78 SD230000        Breve Accent
+79 SD130000        Grave Accent
+7A SA060000        Divide Sign
+7B SA020000        Plus or Minus Sign
+7C SM190000        Degree Symbol
+7D SD110000        Acute Accent
+7E SM510000        Seconds Symbol
+7F SM530000        Registered Trademark Symbol
+80 SM640000        Double Overline
+81 GA010000        Alpha Small
+82 GB010000        Beta Small
+83 GP610000        Psi Small
+84 GF010000        Phi Small
+85 GE010000        Epsilon Small
+86 GP010000        Pi Small
+87 GL010000        Lambda Small
+88 GE310000        Eta Small
+89 GI010000        Iota Small
+8A SF010000        Upper Left Box Corner
+8B SF080000        Left Middle Box Side
+8C SF020000        Lower Left Box Corner
+8D SF110000        Center Box Bar Vertical
+8E SS200000        Upper Left Parenthesis Section
+8F SS210000        Lower Left Parenthesis Section
+90 SM560000        Permille Symbol
+91 GT630000        Theta Small (Open Form)
+92 GK010000        Kappa Small
+93 GO310000        Omega Small
+94 GM010000        Mu Small
+95 GN010000        Nu Small
+96 GO010000        Omicron Small
+97 GR010000        Rho Small
+98 GG010000        Gamma Small
+99 GT610000        Theta Small
+9A SF060000        Middle Box Top
+9B SF050000        Box Intersection
+9C SF070000        Middle Box Bottom
+9D SM540000        Trademark Symbol, Serif
+9E SS220000        Upper Right Parenthesis Section
+9F SS230000        Lower Right Parenthesis Section
+A0 SA430000        Congruent To Symbol
+A1 SD190000        Tilde Accent
+A2 GS010000        Sigma Small
+A3 GT010000        Tau Small
+A4 GX010000        Xi Small
+A5 SA070000        Multiply Sign
+A6 GD010000        Delta Small
+A7 GH010000        Chi Small
+A8 GU010000        Upsilon Small
+A9 GZ010000        Zeta Small
+AA SF030000        Upper Right Box Corner
+AB SF090000        Right Middle Box Side
+AC SF040000        Lower Right Box Corner
+AD SM120000        Long Dash/Throughscore
+AE SS250000        Lower Right/Upper Left Brace Section
+AF SS240000        Upper Right/Lower Left Brace Section
+B0 ND102000        Zero Subscript
+B1 ND012000        One Subscript
+B2 ND022000        Two Subscript
+B3 ND032000        Three Subscript
+B4 ND042000        Four Subscript
+B5 ND052000        Five Subscript
+B6 ND062000        Six Subscript
+B7 ND072000        Seven Subscript
+B8 ND082000        Eight Subscript
+B9 ND092000        Nine Subscript
+BA SA780000        Perpendicular Symbol
+BB SS620000        Total Symbol
+BC SM580000        Large Bullet/Solid Circle
+BD SC020000        Pound Sterling Sign
+BE SC010000        International Currency Symbol
+BF SC050000        Yen Sign
+C0 SM110000        Left Brace
+C1 SL030000        Del (APL)
+C2 SA450000        Infinity Symbol
+C3 GP620000        Psi Capital
+C4 GF020000        Phi Capital
+C5 SM300000        Left Arrow
+C6 GP020000        Pi Capital
+C7 GL020000        Lambda Capital
+C8 SM250000        Paragraph Symbol (USA)
+C9 SM320000        Up Arrow
+CA SP320000        Syllable Hyphen
+CB SM610000        Solid Diamond
+CC SD210000        Caron Accent
+CD SS630000        Bottle Symbol
+CE SM130000        Vertical Line/Logical OR
+CF SM670000        Substitute Blank
+D0 SM140000        Right Brace
+D1 SM100000        Double Underscore
+D2 SM240000        Section Symbol (USA)/Paragraph Symbol (Europe)
+D3 GO320000        Omega Capital
+D4 SA490000        Partial Differential Symbol
+D5 SA300000        Sine Symbol
+D6 SM330000        Down Arrow
+D7 SM160000        Liter Symbol
+D8 GG020000        Gamma Capital
+D9 GT620000        Theta Capital
+DA SM450000        Open Square
+DB SM470000        Solid Square/Histogram/Square Bullet
+DC SM480000        Slash Square/Cancelled Square
+DD SM150000        Overline
+DE SS280000        Upper Summation Symbol Section
+DF SS290000        Lower Summation Symbol Section
+E0 SM070000        Backslash
+E1 SP310000        Numeric Space
+E2 GS020000        Sigma Capital
+E3 SM310000        Right Arrow
+E4 GX020000        Xi Capital
+E5 SA470000        Proportional To Symbol
+E6 GD020000        Delta Capital
+E7 SA480000        Identity Symbol
+E8 GU020000        Upsilon Capital
+E9 SA440000        Approximately Equal To Symbol
+EA SA160000        Cycle Symbol/Equivalent To Symbol/Similar To Symbol/Perspective Symbol
+EB SM660000        Logical NOT/End Of Line Symbol
+EC SM590000        Forward Arrow Indicator
+ED SM600000        Solid Triangle
+EE SS260000        Upper Integral Symbol Section
+EF SS270000        Lower Integral Symbol Section
+F0 ND101000        Zero Superscript
+F1 ND011000        One Superscript
+F2 ND021000        Two Superscript
+F3 ND031000        Three Superscript
+F4 ND041000        Four Superscript
+F5 ND051000        Five Superscript
+F6 ND061000        Six Superscript
+F7 ND071000        Seven Superscript
+F8 ND081000        Eight Superscript
+F9 ND091000        Nine Superscript
+FA ND100008        Zero Slash
+FB NF180000        One Eighth
+FC NF190000        Three Eighths
+FD NF200000        Five Eighths
+FE NF210000        Seven Eighths
+FF
+/* END of table --------------------------------------------------------
+

@@ -1,0 +1,607 @@
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+
+<HTML LANG="en">
+ <HEAD>
+  <TITLE>Doug Jones's punched card codes</TITLE>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+  <META name="viewport" content="width=device-width, initial-scale=1">
+  <META name="Author" content="Douglas W. Jones">
+  <META name="Language" content="English">
+  <META name="editor" content="/usr/bin/vi">
+  
+  
+  
+  <STYLE TYPE="text/css">
+   BODY { margin-left: 3%; margin-right: 3%; }
+   H2.SQUAT { margin-top: 0.4em; margin-bottom: 0.25em; }
+   H3.SQUAT { margin-top: 0.3em; margin-bottom: 0.2em; }
+   H4.SQUAT { margin-top: 0.2em; margin-bottom: 0.15em; }
+   H5.SQUAT { margin-top: 0.17em; margin-bottom: 0.15em; }
+   * { line-height: 1.1 }
+   P.SQUAT { margin-top: 0.25em; margin-bottom: 0.15em; }
+   UL.SQUAT { margin-top: 0.25em; margin-bottom: 0.15em; }
+   EM.O { font-style: normal; text-decoration: overline; }
+   EM.U { font-style: normal; text-decoration: underline; }
+   EM.OU { font-style: normal; text-decoration: overline underline; }
+   EM.S { font-style: normal; text-decoration: line-through; }
+   A { text-decoration: underline; }
+   A.I { font-style: italic; text-decoration: none; }
+   SUP { vertical-align: 0; position: relative; bottom: 1ex; }
+   SUB { vertical-align: 0; position: relative; top: 0.8ex; }
+   P { line-height: 1.3 }
+   TABLE.BOXY { border: 0; padding: 0; border-spacing: 0;
+                border-collapse: collapse; }
+   TD.BOX { border: solid; border-width: thin; border-color: DimGray;
+	      text-align: center; }
+   TD.BOXTT { border: solid; border-width: thin; border-color: DimGray;
+	      font-family: monospace; text-align: center; }
+   TD.TT { font-family: monospace; text-align: left; }
+   TD.TTSPACE { font-family: monospace; text-align: left; color: white }
+   TD.SHADE { background: Silver; text-align: center; }
+   CAPTION { padding-top: 6px; }
+   DIV.HEADBOX { border: groove; border-width: 2px; background: #F0F0E0; padding-top: 1%; padding-bottom: 1%; padding-left: 5px; }
+   DIV.HEADBOX P { margin-top: 0.8em; margin-bottom: 0.8em; }
+   DIV.HEADBOX H1 { margin-top: 0.2em; margin-bottom: 0.4em; }
+   DIV.HEADBOX H2 { margin-top: 0.2em; margin-bottom: 0.4em; }
+   DIV.INDENT { border: none; padding-left: 1em }
+  </STYLE>
+ </HEAD>
+ <BODY BGCOLOR="#FFFFFF" TEXT="#000000" link="#0000CC" vlink="#880088" alink="#880088">
+  <DIV CLASS=HEADBOX>
+   
+   <TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0"><TR><TD>&nbsp;&nbsp;<TD>
+    
+     <H1>Punched Card Codes</H1>
+    
+    
+    <P>
+    <DIV ROLE="contentinfo">
+    
+     Part of <A HREF="index.html">
+      
+      the Punched Card Collection
+      
+     </A>
+     <BR>
+     
+    
+    
+     by
+     <A HREF="https://homepage.cs.uiowa.edu/~dwjones/">Douglas W. Jones</A>
+     
+     <BR>
+    
+    
+    <A HREF="https://www.uiowa.edu/">
+     T<SMALL>HE</SMALL> U<SMALL>NIVERSITY</SMALL>
+    <SMALL>OF</SMALL> I<SMALL>OWA</SMALL></A>
+    <A HREF="https://homepage.cs.uiowa.edu/">Department&nbsp;of&nbsp;Computer&nbsp;Science</A>
+    
+    
+    
+    </DIV>
+   </TABLE>
+    
+  </DIV>
+ 
+
+
+
+The original punched card coding used by Hollerith allowed coding of only
+a limited alphabet; over the years, this was extended in many ways, but
+while many of these extensions were upward compatable from the original
+code, no attempt to standardize the extensions was successful until the
+end of the punched card era.  As a result, keypunch users got quite used
+to learning, for example, that &cent; was to be typed when [ was intended.
+<P>
+The standard punched card had 80 columns, numbered 1 to 80 from left to right.
+Each column could hold one character, encoded as some combination of punches
+in the 12 rows of the card.  Rows were numbered and grouped as follows:
+<PRE WIDTH=70>
+                  ____________
+                 /
+          /  12 / O
+  Zone rows  11|   O
+          \/  0|    O
+          /   1|     O
+         /    2|      O
+        /     3|       O
+  Numerc      4|        O
+  rows        5|         O
+        \     6|          O
+         \    7|           O
+          \   8|            O
+           \  9|             O
+               |______________
+</PRE>
+There is some ambiguity in the classification and numbering of the 10th
+row.  This was either numeric row 0, because it was usually punched to
+encode the numeral zero, or it was zone row 10, because it served to mark
+one of the three &quot;zones&quot; into which the alphabet was divided.
+Punches in rows 8 and 9 also identified distinct zones in some card codes,
+although they were not usually described as such.
+<P>
+In written material on card codes, hyphenation was used to connect the row
+numbers punched in one column to encode one character; for example, in most
+card codes, a comma was encoded as 0-8-3, or punches in rows 0, 8 and 3 of
+one card column.  In this notation, zone punches were always listed first,
+and for the triple punch characters involving row 8, this was usually
+listed between the zone punch and the numeric punch that distinguished that
+character.
+<P>
+<H2><A NAME=BCD>The Main Line of Development, from BCD to EBCDIC</A></H2>
+<P>
+The common 6-bit BCD encodings of the 12 columns of a punched card allowed
+for 64 distinct punch combinations.  The following illustration shows these
+combinations, along with the &quot;consensus code&quot; that was common to
+the main line of descendants of Hollerith's coding system:
+<PRE WIDTH=70>
+     ________________________________________________________________
+    / -0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ       .     $     ,
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO      ?     ?     OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O     ?     ?     O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOOOOOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________
+</PRE>
+Holes in 80 column cards were rectangular, not the letter O as shown, and
+there was some variation in the coding of the postions shown with ?.
+A blank was, of course, always represented by a card column with no holes
+punched.
+<P>
+While there were many 6-bit encodings derived from this punched card code,
+most such encodings rested on a 4 bit BCD encoding of the hole punched
+in rows 1 to 9, augmented with a 2 bit code indicating the zone punch.
+For example, consider the following:
+<PRE>
+            1 2 3 4 5 6
+            ___________
+           |_|_|_|_|_|_|
+           |   |       |
+           Zone Numeric
+
+        set bit    if punch in rows
+           1            0 or 12
+           2           11 or 12
+
+           3            8 or 9
+           4         4, 5, 6 or 7
+           5         2, 3, 6 or 7
+           6        1, 3, 5, 7 or 9
+</PRE>
+Note that this particular 6-bit code (used by the
+<A HREF="http://homepage.cs.uiowa.edu/~dwjones/pdp8/man/card.html#rcra">
+PDP-8 RCRA instruction</A>)
+is only an example.  IBM's BCD codes were all more complex, partly because
+of a desire to represent the numeral zero with the 6-bit numeric code
+000000 (in the IBM 704, 709, 7040 and 7090) or with 001010 (in the IBM 705,
+7080, 1401, 1410 and 1414).  This is presumably related to the use of the
+12-0 and 11-0 combinations in these machines.
+<P>
+<H3>The IBM model 026 keypunch</H3>
+<P>
+The IBM model 026 keypunch, introduced in July 1949, was the workhorse of
+much early work in business data processing, and although it was
+incapable of automatically punching the
+large character set required by most programming languages, many model 026
+punches remained in use into the early 1970's.  There were at least two common
+character sets supported by this punch, one for commercial applications and
+one oriented towards the needs of FORTRAN - the difference was in the keycaps
+and the characters printed on the cards, not in the holes punched, and many
+keypunches produced hybrids of these two character sets!
+<PRE WIDTH=70>
+FORT +-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ ='    .)    $*    ,(
+COMM &amp;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ #@    .&curren;    $*    ,%
+     ________________________________________________________________
+    / -0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ       .     $     ,
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO      ?     ?     OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O     ?     ?     O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOOOOOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________
+</PRE>
+Later models of the 026 commercial character set frequently substituted
+the <TT>&lt;</TT> character for <TT>&curren;</TT> (12-8-4).
+<P>
+Note that the IBM 026 commercial character set is identified as the BCD-A
+character set in
+<A HREF="http://www.wins.uva.nl/faculteit/museum/technotes/DWcodes.html">
+Dik Winter's collection of collating sequences</A>, and that
+the FORTRAN character set is identified as BCD-H.  It is probable that
+A stands for Alphameric (an IBMish contraction of Alphanumeric), while
+H stands for Hollerith, with reference to FORTRAN's Hollerith encoding
+of text strings.
+<P>
+The IBM 024 keypunch was identical to the 026, except
+that it did not
+include a printing mechanism.  Formally, the 026 was called a printing
+keypunch because of this mechanism.  The 024 had the same keyboard options.
+The 024 punch could punch at 80 columns per second (for example, when
+duplicating a previously punched card), while the 026 dot-matrix printing
+mechanism limited the speed to 18 columns per second.
+<P>
+The 1963 IBM <I>Student Text</I> for the 7040 and 7044 computers
+(Form C22-6732-1) states that the H code is the standard IBM card code
+(page 21).  Figure 23 on page 22 gives the following two sets of graphics
+for the H code, one for report writing, a superset of the 026 commercial
+code, and one for programming languages a superset of the 026 FORTRAN code:
+<PRE WIDTH=70>
+REPT &amp;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ<EM CLASS=S>b</EM>#@'&gt;<EM CLASS=S>V</EM>?.&curren;[&lt;&#167;!$*];<EM CLASS=U>^</EM>&#177;,%v\&#182;
+PROG +-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ<EM CLASS=S>b</EM>=':&gt;<EM CLASS=S>V</EM>?.)[&lt;&#167;!$*];<EM CLASS=U>^</EM>&#177;,(v\&#182;
+     ________________________________________________________________
+    / -0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ       .     $     ,    
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO      O     O     OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O                 O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOO OOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________
+</PRE>
+The 1962 <I>IBM 1401 Reference Manual</I>
+(A-24-1403-5), gives the character set for that machine in Figure 267;
+This is closely related to the report writing code given above:
+<PRE WIDTH=70>
+1401 &amp;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ #@:&gt;<EM CLASS=S>V</EM>?.&curren;(&lt;&#167;!$*);<EM CLASS=U>^</EM>&#177;,%='&quot;
+     ________________________________________________________________
+    /&amp;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ<EM CLASS=S>b</EM>#@'&gt;<EM CLASS=S>V</EM>?.&curren;[&lt;&#167;!$*];<EM CLASS=U>^</EM>&#177;,%v\&#182;
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO      O     O     OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O                 O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOO OOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________
+</PRE>
+A number of the characters used in the IBM 7040 and 1401 card codes are
+misprinted in the above two figures; most of these are defined as control
+characters in the 1401 documentation:
+<PRE>
+	<EM CLASS=S>b</EM> (8-2)    slashed b                      substitute blank
+	<EM CLASS=S>V</EM> (8-7)    square root                    tape mark
+        &#167; (12-8-7) triple horizontal bar slashed  group mark
+        <EM CLASS=U>^</EM> (11-8-7) Greek capital delta            mode change
+	&#177; (0-8-2)  not equals                     record mark
+	v (0-8-5)  inverted caret or equals       word separator
+	&#182; (0-8-7)  triple vertical bar slashed    segment mark
+</PRE>
+Note that the parentheses in the 1401 character set were frequently printed
+as square braces; only in character sets that contain both parentheses and
+braces do users care much about the distinction; the BCD code included in
+Dik Winter's collection is a hybrid of the 1401 and the 70x commercial
+character sets, without the 12-0 and 11-0 multipunches, and with no printable
+graphics associated with the control characters.
+<P>
+<H3><A NAME=029>The IBM model 029 keypunch</A></H3>
+<P>
+The IBM model 029 keypunch, introduced around 1964, was the most common
+keypunch of the late 1960's and early 1970's.  These were found almost
+everywhere computers were to be found, and they supported a full 64 printing
+characters, with graphics that
+represented a compromize between the needs of programmers and commercial
+applications.  The closely allied EBCD and IBMEL character sets are also given
+here.  While these character sets are sufficient for FORTRAN, they are
+upward compatable from the 026 commercial character set and they have a large
+degree of compatability with the 70x0 character set (with which they are
+compared here):
+<PRE WIDTH=70>
+029  &amp;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:#@'=&quot;&#162;.&lt;(+|!$*);&#172; ,%_&gt;?
+IBME &#185;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:#&#178;'=&quot;].&lt;(+|[$*);&#172;&#179;,%_&gt;?
+EBCD &amp;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:#@'=&quot;[.&lt;(+|]$*);^\,%_&gt;?
+     ________________________________________________________________
+    /&amp;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ<EM CLASS=S>b</EM>#@'&gt;<EM CLASS=S>V</EM>?.&curren;[<&#167;!$*];<EM CLASS=U>^</EM>&#177;,%v\&#182;
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO                  OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O     O     O     O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOOOOOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________
+</PRE>
+In the IBMEL character set, the following characters are misprinted:
+<PRE>
+	&#185; (12)     logical and
+	&#178; (8-4)    logical or
+	&#179; (0-8-2)  subscript ten
+</PRE>
+The EBCD and IBMEL character sets come from Dik Winter's collection.  These
+were used by Electrologica computers.
+<P>
+<H3><A NAME=EBCDIC>EBCDIC</A></H3>
+<P>
+No description of punched card codes would be complete without a description
+of the Extended Binary Coded Decimal Interchange Code (EBCDIC) developed for
+the IBM System 360.  EBCDIC is a direct descendant of the 6-bit BCD codes
+used by IBM's early computers.  One consequence of this is that the EBCDIC
+codes for the 029 character set can be truncated to 6 bits, yielding a
+perfectly useful 6-bit BCD character set.
+<P>
+What follows is the usual tabular presentation of the EBCDIC code, where the
+labels on the top and left sides of the table give the two digit hexadecimal
+code for each table entry, while the labels on the bottom and right sides
+give the punched card holes used to encode the entry:
+<PRE WIDTH=70>
+  00  10  20  30  40  50  60  70  80  90  A0  B0  C0  D0  E0  F0
+  ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___
+0|NUL|   |DS |   |SP | &amp; | - |   |   |   |   |   |   |   |   | 0 |0
+ |__1|___|__2|___|__3|__4|__5|___|___|___|___|___|___|___|___|___|
+1|   |   |SOS|   |   |   | / |   | a | j |   |   | A | J |   | 1 |1
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+2|   |   |FS |   |   |   |   |   | b | k | s |   | B | K | S | 2 |2
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+3|   |TM |   |   |   |   |   |   | c | l | t |   | C | L | T | 3 |3
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+4|PF |RES|BYP|PN |   |   |   |   | d | m | u |   | D | M | U | 4 |4
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+5|HT |NL |LF |RS |   |   |   |   | e | n | v |   | E | N | V | 5 |5
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+6|LC |BS |EOB|UC |   |   |   |   | f | o | w |   | F | O | W | 6 |6
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+7|DEL|IL |PRE|EOT|   |   |   |   | g | p | x |   | G | P | X | 7 |7
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+8|   |   |   |   |   |   |   |   | h | q | y |   | H | Q | Y | 8 |8
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+9|   |   |   |   |   |   |   |   | i | r | z |   | I | R | Z | 9 |9
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+A|   |   |   |   | &#162; | ! |   | : |   |   |   |   |   |   |   |   |2-8
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+B|   |   |   |   | . | $ | , | # |   |   |   |   |   |   |   |   |3-8
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+C|   |   |   |   | &lt; | * | % | @ |   |   |   |   |   |   |   |   |4-8
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+D|   |   |   |   | ( | ) | _ | ' |   |   |   |   |   |   |   |   |5-8
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+E|   |   |   |   | + | ; | &gt; | = |   |   |   |   |   |   |   |   |6-8
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+F|   |   |   |   | | | &#172; | ? | &quot; |   |   |   |   |   |   |   |   |7-8
+ |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|
+  12  11  10      12  11  10      12  11  10      12  11  10
+  9   9   9                       10  12  11
+</PRE>
+The entries in the above table with footnotes are exceptions to the
+punching rules given by the labels at the bottom and right side of
+the table.  These are punched as follows:
+<OL>
+<LI><TT>NUL</TT> -- 12-0-1-8-9
+<LI><TT>DS </TT> -- 11-0-1-8-9
+<LI><TT>SP </TT> -- no punches
+<LI><TT>& </TT> --- 12
+<LI><TT>- </TT> --- 11
+</OL>
+SP is, of course, space.  The other table entries with multiple character
+names are control characters, and those with names that match the names of
+ASCII control characters serve the same funcitons.  With the modifications
+noted, this table gives a punched card encoding that is fully upward
+compatable with the IBM 029 code given above.
+<P>
+This version of the EBCDIC table is based on the presentation in Appendix C
+of <I>System 360 Programming</I> by Alex Thomas, 1977, Reinhart Press,
+San Francisco.
+<P>
+<H2>Proprietary 026 variants</H2>
+<P>
+Given the sparse nature of the IBM 026 character set and the larger character
+sets supported by printers of the era, many computer manufacturers developed
+proprietary extensions of their own, some with a great degree of compatability
+with IBM's later character set extensions, and some with little or no
+compatability.  The following collection of character sets have clear
+relationships to one or the other IBM 026 code, but no clear relationship to
+IBM's later card codes.
+<P>
+<H3>Control Data Corporation</H3>
+<P>
+Control Data Corporation defined an eccentric version of the BCD character
+set that was clearly oriented towards scientific computing.  This is derived
+from the 026 FORTRAN character set, augmented with a full set of relational
+operators and directional arrows:
+<PRE WIDTH=70>
+CDC  +-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:=&#177;<EM CLASS=U>&lt;</EM>%[&lt;.)<EM CLASS=U>&gt;</EM>&#172;;v$*|&#166;&gt;],(a<EM CLASS=U>=</EM>^
+     ________________________________________________________________
+    /+-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ ='    .)    $*    ,(
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO      O     O     OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O                 O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOOOOOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________
+</PRE>
+In the above, the following characters are misprinted:
+<PRE>
+	&#177; (8-4)    not equals
+        v (11-8-0) logical or
+        | (11-8-5) up-arrow
+	&#166; (11-8-6) down arrow
+        a (0-8-5)  right arrow
+        <EM CLASS=U>=</EM> (0-8-6)  equivalence
+        ^ (0-8-7)  logical and
+</PRE>
+This is called the BCD-CDC character set in Dik Winter's collection.
+<P>
+<H3>Digital Equipment Corporation</H3>
+<P>
+Digital Equipment Corporation defined translation tables for both the
+026 and 029 card; the old version of these mappings given in the
+<I>1967 PDP-8/L Small Computer Handbook</I> simply defined the DEC 026 code
+as equivalent to the IBM 026 Fortran character set and the DEC 029 code as
+equivalent to the IBM 026 Commercial character set.
+<P>
+The later version of these mappings given in the
+<I>1972 Small Computer Handbook</I> gives a DEC 029 code that cleanly maps
+the IBM 029 character set to the common 6-bit upper-case-only subset of ASCII:
+<PRE WIDTH=70>
+DEC9 &amp;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:#@'=&quot;[.&lt;(+^!$*);\],%_&gt;?
+     ________________________________________________________________
+    /&amp;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:#@'=&quot;&#162;.&lt;(+|!$*);&#172; ,%_&gt;?
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO                  OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O     O     O     O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOOOOOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________
+</PRE>
+The DEC 026 code is a workable mapping of the IBM 026 FORTRAN character
+set to ASCII.  Unfortunately, it appears to have nothing in
+common with other extensions of the same character set.  Given the frequency
+of typos in DEC's handbooks, it is possible that the problem is with the
+handbook from which this material was derived.
+<PRE WIDTH=70>
+DEC6 +-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ_=@^'\?.)]&lt;!:$*[&gt;&amp;;,(&quot;#%
+     ________________________________________________________________
+    /+-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ ='    .)    $*    ,(
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO                  OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O     O     O     O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOOOOOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________
+</PRE>
+<P>
+<H3>General Electric</H3>
+<P>
+General Electric used the following collating sequence on their machines,
+including the GE 600 (the machine on which Multics was developed); this
+is largely upward compatable from the IBM 026 commercial character set,
+and it shows strong influence from the IBM 1401 character set while
+supporting the full ASCII character set, with 64 printable characters,
+as it was understood in the 1960's.
+<PRE WIDTH=70>
+GE   &amp;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ[#@:&gt;?+.](&lt;\^$*);'_,%=&quot;!
+     ________________________________________________________________
+    /&amp;-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ #@:&gt;<EM CLASS=S>V</EM> .&curren;(&lt;&#167; $*);<EM CLASS=U>^</EM>&#177;,%='&quot;
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO                  OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O     O     O     O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOOOOOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________
+</PRE>
+In the above, the 0-8-2 punch shown as _ should be printed as an
+assignment arrow, and the 11-8-2 punch shown as ^ should be printed as an
+up-arrow.  This conforms to the evolution of of these ASCII symbols from
+the time GE adopted this character set and the present.
+<P>
+This example is based on a translation table provided by Dik Winter
+and on a GE 600 self-interpreting punched-card in my collection.
+<P>
+<H3>UNIVAC</H3>
+<P>
+The UNIVAC 1108 version of the 029 character set, while large,
+had no clear relationship to either IBM's 029 character set or to ASCII.
+Instead, this character set is clearly related to the 70x Programmer's
+character set and upward compatable from the 026 FORTRAN character set:
+<PRE WIDTH=70>
+1108 +-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ&amp;=':&gt;@&#183;.)[&lt;#&#183;$*];<EM CLASS=U>^</EM>&#177;,(%\&curren;
+     ________________________________________________________________
+    /+-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ<EM CLASS=S>b</EM>=':&gt;<EM CLASS=S>V</EM> .)[&lt;&#167; $*];^&#177;,(v\&#182;
+12 / O           OOOOOOOOO                        OOOOOO
+11|   O                   OOOOOOOOO                     OOOOOO
+ 0|    O                           OOOOOOOOO                  OOOOOO
+ 1|     O        O        O        O
+ 2|      O        O        O        O       O     O     O     O
+ 3|       O        O        O        O       O     O     O     O
+ 4|        O        O        O        O       O     O     O     O
+ 5|         O        O        O        O       O     O     O     O
+ 6|          O        O        O        O       O     O     O     O
+ 7|           O        O        O        O       O     O     O     O
+ 8|            O        O        O        O OOOOOOOOOOOOOOOOOOOOOOOO
+ 9|             O        O        O        O
+  |__________________________________________________________________
+</PRE>
+In the above, the following characters are misprinted:
+<PRE>
+	<EM CLASS=U>^</EM> (11-8-7) solid triangle (delta on the IBM 70x)
+	&#177; (0-8-2) not equals (as in the IBM 70x)
+</PRE>
+Note that the two characters shown as centered dots (&#183;) on the 1108
+keypunch are the characters with codings that differ from those used on
+the IBM 70x.
+<P>
+This character set was inferred from a punched card in my collection.
+<P>
+<HR>
+<P>
+I found an interesting writeup on the broader class of codes developed
+before the era of binary computing:
+<P>
+-- <A HREF="http://www.circuitousroot.com/artifice/telegraphy/tty/codes/">Codes
+	that Don't Count</A>
+<P>
+This paper by David M. MacMillan focuses on telegraph and punched tape codes
+developed before the connection between permutation codes and binary numbers
+was understood by most of the people involved.  In these codes, as with the
+punched card codes described here, the codes assigned to alphabetic characters
+were not in binary order.  In some cases, the central focus was on minimizing
+the total wear on the punches, so common characters were assigned just one
+punch each, while uncommon characters punched more holes.  In Baudot's original
+code, which was designed to be typed on a "chord keyboard", vowels were punched
+with just the right hand, while consonents required both hands.
+
+</BODY>
+</HTML>

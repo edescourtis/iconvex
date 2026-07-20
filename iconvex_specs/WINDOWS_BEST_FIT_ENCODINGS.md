@@ -1,0 +1,23 @@
+# Microsoft best-fit converter profiles
+
+Pinned from the Unicode Consortium's Microsoft WindowsBestFit archive.
+These are explicitly directional converter profiles: MB/DBCS tables define
+decoding and WC tables define canonical plus best-fit encoding.
+
+| Profile | Decode mappings | Encode mappings | Source SHA-256 |
+|---|---:|---:|---|
+| `WINDOWS-BESTFIT-874` | 256 | 394 | `663f43ca662e037c4534cb16298b560f29ce29c27b49b3589601ec3d97dd89fd` |
+| `WINDOWS-BESTFIT-932` | 9805 | 9486 | `2614cfea35c3c86c41d33198793a84ca44edee3cf0ee0013a61a43fba4ece331` |
+| `WINDOWS-BESTFIT-936` | 24070 | 24482 | `e5070a2d6ad26619f5872ddbe64d3381c11620af5adbb04cda0f0abb1a91fdae` |
+| `WINDOWS-BESTFIT-949` | 17366 | 17760 | `50e13b60ea8fda66a8223ecc85270e0f182303222244e2345d3d57f3e839d20a` |
+| `WINDOWS-BESTFIT-950` | 19850 | 20321 | `cf8c23389a42a226ea707f7ec32c665556d1fc3364db25bd765ce64d54eaee2a` |
+| `WINDOWS-BESTFIT-1250` | 256 | 693 | `cef9f171e67b09445bcb3f9ffccdc89418250ff825f1bd2d29a92d2074d7a53b` |
+| `WINDOWS-BESTFIT-1251` | 256 | 640 | `59ec85612ff908d9da0e877893c935941e56b13a2882b4fb9c9599be3d1ce4e7` |
+| `WINDOWS-BESTFIT-1252` | 256 | 698 | `72ea23c939c5b26fae7aded0207b327e2f3902d7d3c168d7087f5cfc38ee76a9` |
+| `WINDOWS-BESTFIT-1253` | 256 | 622 | `ea80c442aff7f09b36da6335f85f8e527f51c146beeb9825ec00d1b6ca99a99e` |
+| `WINDOWS-BESTFIT-1254` | 256 | 694 | `3d02512087634dc493b720992b590277736ffb2d5b0b665d69b6b9727e2c361a` |
+| `WINDOWS-BESTFIT-1255` | 256 | 352 | `fdd4bdda74f6571d89171b0070ac052cd3714c395dc3d1799bcd5e4a4da6f83a` |
+| `WINDOWS-BESTFIT-1256` | 256 | 544 | `745c447ada04a838da8bea406c13f446c7453b6371e8c6c7863a632443d56007` |
+| `WINDOWS-BESTFIT-1257` | 256 | 350 | `b8c5d7f3b8c25c3d5625d44dd3d6ee7a06e652ddf77373d050282c1cb7517366` |
+| `WINDOWS-BESTFIT-1258` | 256 | 350 | `5d52a9357b7d6b5b5014ed5a51be0ff9809b0c33625793d2a4feaf502e0682f1` |
+| `WINDOWS-BESTFIT-1361` | 17396 | 17542 | `7dcda2d5d2cfc5ddf43757d589a0106e020ef0d9b84de47f08e18297ae0fe1ec` |

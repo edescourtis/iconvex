@@ -1,0 +1,8 @@
+draft-ietf-idn-utf6-00, November 16, 2000
+
+The distribution of this document is unlimited.
+
+Copyright (c) The Internet Society (2000).  All Rights Reserved.
+
+The complete upstream status, distribution, copyright, author, and reference
+text is retained byte-for-byte in draft-ietf-idn-utf6-00.txt.

@@ -1,0 +1,285 @@
+* -------------------------------------------------------------------------------
+* Copyright IBM Corp. 2011, 2012. All rights reserved.
+* C-H 3-3220-050           : REGISTRY, Graphic Character Sets and Code Pages
+*
+* CPGID                    : 01445
+* Registration Date        : 2011-07-28
+* Category of Registration : Unrestricted
+* Common Name              : IBM AFP PUA No. 1
+* Code                     : UCS Plane
+* Maximal Character Set    : 03095
+* Character Set(s)
+* registered as CGCSGID 
+* with this Code Page      : 03095
+* Other Character Set(s)
+* contained in this
+* Code Page (partial list) : 
+* Notes                    : 1. This code page represents the IBM Advanced Function Printing (AFP) Private User Area No.1  (AFP-PUA-1) of  Plane 15 (x0F) of ISO/IEC 10646 and Unicode.  This refers to code positions x0FF000 to x0FFFFF of which 254 positions (U+0FF000 to U+FFFFD) have been designated for this code page.  It is to be used along with one or more other UCS code pages in the IBM Corporate Registry: BMP (CPGID 01400 or CPGID 01448), SMP (CPGID 01401), SIP (CPGID 01402), SSP (CPGID 01414), or IBM Corporate PUA - in BMP (CPGID 1449).
+*                            2. The area shown in the chart above represents only 254 bytes of row FF in plane 0F. Code positions FFFE and FFFF (in row FF) in each plane (x00 to x10) are reserved for non-characters in the standards.
+*                            3. The code points in this area have not been defined by the ISO or Unicode standards and are interpretable only by a private agreement between sender and recipient of UCS data.  At present CS 3095, containing 171 of the 254 IBM AFP-PUA-1 characters has been defined.
+*                            4. Nov 16, 2011 - Updated to replace AFP GCGIDs (IXA0*) with 'Far East' GCGIDs (U0FF*).
+*                            5. May 07, 2012 - Updated to add the following (4) new characters to CS03095: SF5700H0, SF6100H0, SM7800H0, and SM9100H0.
+* Last Revision Date       : 2012-05-07
+* Status                   : Registered
+* Languages                : All; Specials
+* Countries/Regions        : All; Specials
+* Encoding Scheme          : 7209
+* -------------------------------------------------------------------------------
+*  IBM ID	Unicode ID	IBM Name
+00 SF100001			Half Width Box Drawings Light Horizontal
+01 SO140000			Character Erase
+02 SF110001			Half Width Box Drawings Light Vertical
+03 SO150000			Group Erase
+04 SF1000H0			Box Drawings Light Horizontal - Halfwidth
+05 SF1100H0			Box Drawings Light Vertical - Halfwidth
+06 SF0500H0			Box Drawings Light Vertical and Horizontal - Halfwidth
+07 SF0600H0			Box Drawings Light Down and Horizontal - Halfwidth
+08 SF090001			Right Middle Box Side, Low Horizontal Line
+09 SA680000			Is Not an Element Of Symbol
+0A SF050001			Box Intersection, Low Horizontal Line
+0B
+0C SF0100H0			Box Drawings Light Down and Right - Halfwidth
+0D SO130000			OCR A Long Vertical
+0E
+0F
+10 SF0300H0			Box Drawings Light Down and Left - Halfwidth
+11 SF060001			Middle Box Top
+12
+13
+14 SF0200H0			Box Drawings Light Up and Right - Halfwidth
+15
+16
+17
+18 SF0400H0			Box Drawings Light Up and Left - Halfwidth
+19
+1A SM230000			Radical/Tape Mark
+1B SF0900H0			Box Drawings Light Vertical and Left - Halfwidth
+1C SF080001			Left Middle Box Side, Low Horizontal Line
+1D SF0800H0			Box Drawings Light Vertical and Right - Halfwidth
+1E SG150000			Integral, Upper Half
+1F SG160000			Integral, Lower Half
+20 SA350008			Angle Symbol
+21 SA150000			Factorial Symbol
+22 AA210001			Aleph Madda (A) - Isolated-Final
+23 AA310001			Aleph Hamza (A) - Isolated-Final
+24
+25 AA310401			Hamza under Aleph (A) - Isolated-Final
+26 AY310001			Yeh Hamza (A) - Isolated-Final
+27 AA010001			Aleph (A) - Isolated-Final
+28
+29
+2A SM6000H0			Solid Triangle - Halfwidth
+2B
+2C
+2D
+2E
+2F SM6500H0			Broken Bar - Halfwidth
+30 SM6900H0			White sun with rays - Halfwidth
+31 SM5700H0			Bullet - Halfwidth
+32 SM540001			Trademark Symbol, Sans Serif
+33 SM020001			Percent Sign
+34 SF070001			Half Width Box Drawings Light Up and Horizontal
+35
+36 SF0700H0			Box Drawings Light Up and Horizontal - Halfwidth
+37 SM030001			Ampersand
+38 SM030002			Ampersand
+39
+3A
+3B
+3C
+3D
+3E
+3F SM540002			Trademark Symbol, Serif
+40 SM050001			At Sign
+41
+42
+43
+44
+45
+46
+47 AH010007			Heh (A) - Initial-Middle
+48
+49 AA020001			Aleph Maksura (A) - Isolated-Final
+4A AY010001			Yeh (A) - Isolated-Final
+4B
+4C
+4D
+4E SF120000			Broken Bar Vertical
+4F SF120001			Broken Bar Vertical
+50 SF4300H0			Box drawings double horizontal - Halfwidth
+51 SF2400H0			Box drawings double vertical - Halfwidth
+52
+53
+54 SF3900H0			Box drawings double down and right - Halfwidth
+55 SF2600H0			Box drawings double up and left - Halfwidth
+56
+57 SF2500H0			Box drawings double down and left - Halfwidth
+58
+59
+5A SF3800H0			Box drawings double up and right - Halfwidth
+5B
+5C
+5D
+5E
+5F
+60 SA5400H0			Not Equal to - Halfwidth
+61 SF5700H0			Solid Fill Character, Bottom Half - Halfwidth
+62 SF4200H0			Box drawings double vertical and right - Halfwidth
+63 SF2300H0			Box drawings double vertical and left - Halfwidth
+64 SA5200H0			Less-than or equal to - Halfwidth
+65 SA5300H0			Greater-than or equal to - Halfwidth
+66 SF4100H0			Box drawings double down and horizontal - Halfwidth
+67 SF4000H0			Box drawings double up and horizontal - Halfwidth
+68 SF4400H0			Box drawings double vertical and horizontal - Halfwidth
+69 BZ100300			Mai Ek, Low Position
+6A BZ200300			Mai Tho, Low Position
+6B BZ300300			Mai Tri, Low Position
+6C BZ400300			Mai Chattawa, Low Position
+6D BZ500300			Thanthakhat, Low Position
+6E
+6F
+70 BZ100400			Mai Ek, Left Position
+71 BZ200400			Mai Tho, Left Position
+72 BZ300400			Mai Tri, Left Position
+73 BZ400400			Mai Chattawa, Left Position
+74 BZ500400			Thanthakhat, Left Position
+75 ND0510H0			Superscript five
+76 ND0610H0			Superscript six
+77 BZ100700			Mai Ek, Low Left Position
+78 BZ200700			Mai Tho, Low Left Position
+79 BZ300700			Mai Tri, Low Left Position
+7A BZ400700			Mai Chattawa, Low Left Position
+7B BZ500700			Thanthakhat, Low Left Position
+7C
+7D SP101000			Minus Sign Superscript
+7E
+7F
+80
+81
+82 SA400000			Is Included In Symbol/Is A Subset Of Symbol
+83 SA410000			Includes Symbol/Is A Superset Of Symbol
+84 SA4200H0			Right Angle Symbol - Halfwidth
+85
+86
+87
+88
+89
+8A
+8B
+8C SM2800H0			Male Symbol - Halfwidth
+8D SM2900H0			Female Symbol - Halfwidth
+8E SF6100H0			Solid Fill Character - Halfwidth
+8F SF640000			Left Vertical, Bar Graphic
+90 SM3000H0			Leftwards Arrow - Halfwidth
+91 SM3200H0			Upwards Arrow - Halfwidth
+92 SM3100H0			Rightwards Arrow - Halfwidth
+93 SM3300H0			Downwards Arrow - Halfwidth
+94 SF1600H0			Dark shade - Halfwidth
+95 SM7600H0			Up down arrow - Halfwidth
+96 SF1400H0			Light shade - Halfwidth
+97 ND0710H0			Superscript seven
+98 ND0810H0			Superscript eight
+99 ND0910H0			Superscript nine
+9A ND1010H0			Superscript zero
+9B ND0410H0			Superscript four
+9C SP3000H0			No-break space - Halfwidth
+9D SA570000			Symmetric Difference
+9E SA500000			Curly Theta Symbol
+9F
+A0 SM4700H0			Black Square - Halfwidth
+A1
+A2
+A3
+A4 SC120000			Yuan Sign
+A5 SA780000			Perpendicular Symbol
+A6
+A7 SM2400H0			Section Sign - Halfwidth
+A8 SM2500H0			Paragraph Symbol (USA) - Halfwidth
+A9 SM520001			Copyright Symbol, Sans Serif
+AA SM520002			Copyright Symbol, Serif
+AB
+AC SC2000H0			Euro Sign - Halfwidth
+AD SM530002			Registered Trademark Symbol, Serif
+AE SM530001			Registered Trademark Symbol, Sans Serif
+AF
+B0 SA0200H0			Plus-minus Sign - Halfwidth
+B1 ND0110H0			Superscript one
+B2 ND0210H0			Superscript two
+B3 ND0310H0			Superscript three
+B4 SM7200H0			Downwards arrow with corner left wards - Halfwidth
+B5 U0FF0025			Japanese Graphic Character Set, Kanji - Host Code ECB5: U+304B, U+309A (defined in AFP as IXA0ECB5 - Hiragana Letter Bidakuon NGA)
+B6 U0FF0026			Japanese Graphic Character Set, Kanji - Host Code ECB6: U+304D, U+309A (defined in AFP as IXA0ECB6 - Hiragana Letter Bidakuon NGI)
+B7 U0FF0027			Japanese Graphic Character Set, Kanji - Host Code ECB7: U+304F, U+309A (defined in AFP as IXA0ECB7 - Hiragana Letter Bidakuon NGU)
+B8 U0FF0028			Japanese Graphic Character Set, Kanji - Host Code ECB8: U+3051, U+309A (defined in AFP as IXA0ECB8 - Hiragana Letter Bidakuon NGE)
+B9 U0FF0029			Japanese Graphic Character Set, Kanji - Host Code ECB9: U+3053, U+309A (defined in AFP as IXA0ECB9 - Hiragana Letter Bidakuon NGO)
+BA U0FF002A			Japanese Graphic Character Set, Kanji - Host Code ECBA: U+30AB, U+309A (defined in AFP as IXA0ECBA - Katakana Letter Bidakuon NGA)
+BB U0FF002B			Japanese Graphic Character Set, Kanji - Host Code ECBB: U+30AD, U+309A (defined in AFP as IXA0ECBB - Katakana Letter Bidakuon NGI)
+BC U0FF002C			Japanese Graphic Character Set, Kanji - Host Code ECBC: U+30AF, U+309A (defined in AFP as IXA0ECBC - Katakana Letter Bidakuon NGU)
+BD U0FF002D			Japanese Graphic Character Set, Kanji - Host Code ECBD: U+30B1, U+309A (defined in AFP as IXA0ECBD- Katakana Letter Bidakuon NGE)
+BE U0FF002E			Japanese Graphic Character Set, Kanji - Host Code ECBE: U+30B3, U+309A (defined in AFP as IXA0ECBE - Katakana Letter Bidakuon NGO)
+BF U0FF002F			Japanese Graphic Character Set, Kanji - Host Code ECBF: U+30BB, U+309A (defined in AFP as IXA0ECBF - Katakana Letter AINU CE)
+C0 U0FF0030			Japanese Graphic Character Set, Kanji - Host Code ECC0: U+30C4, U+309A (defined in AFP as IXA0ECC0 - Katakana Letter AINU TU)
+C1 U0FF0031			Japanese Graphic Character Set, Kanji - Host Code ECC1: U+30C8, U+309A (defined in AFP as IXA0ECC1 - Katakana Letter AINU TO)
+C2 U0FF0032			Japanese Graphic Character Set, Kanji - Host Code ECC2: U+31F7, U+309A (defined in AFP as IXA0ECC2 - Katakana Letter AINU P)
+C3 U0FF0033			Japanese Graphic Character Set, Kanji - Host Code ECC3: U+00E6, U+0300 (defined in AFP as IXA0ECC3 - Latin Small Letter ae with Grave)
+C4 U0FF0034			Japanese Graphic Character Set, Kanji - Host Code ECC4: U+0254, U+0300 (defined in AFP as IXA0ECC4 - Latin Small Letter Open o with Grave)
+C5 U0FF0035			Japanese Graphic Character Set, Kanji - Host Code ECC5: U+0254, U+0301 (defined in AFP as IXA0ECC5 - Latin Small Letter Open o with Acute)
+C6 U0FF0036			Japanese Graphic Character Set, Kanji - Host Code ECC6: U+028C, U+0300 (defined in AFP as IXA0ECC6 - Latin Small Letter Turned v with Grave)
+C7 U0FF0037			Japanese Graphic Character Set, Kanji - Host Code ECC7: U+028C, U+0301 (defined in AFP as IXA0ECC7 - Latin Small Letter Turned v with Acute)
+C8 U0FF0038			Japanese Graphic Character Set, Kanji - Host Code ECC8: U+0259, U+0300 (defined in AFP as IXA0ECC8 - Latin Small Letter schwa with Grave)
+C9 U0FF0039			Japanese Graphic Character Set, Kanji - Host Code ECC9: U+0259, U+0301 (defined in AFP as IXA0ECC9 - Latin Small Letter schwa with Acute)
+CA U0FF003A			Japanese Graphic Character Set, Kanji - Host Code ECCA: U+025A, U+0300 (defined in AFP as IXA0ECCA - Latin Small Letter Hooked schwa with Grave)
+CB U0FF003B			Japanese Graphic Character Set, Kanji - Host Code ECCB: U+025A, U+0301 (defined in AFP as IXA0ECCB - Latin Small Letter Hooked schwa with Acute)
+CC U0FF003C			Japanese Graphic Character Set, Kanji - Host Code ECCC: U+02E9, U+02E5 (defined in AFP as IXA0ECCC - Rising Symbol)
+CD U0FF003D			Japanese Graphic Character Set, Kanji - Host Code ECCD: U+02E5,U+02E9 (defined in AFP as IXA0ECCD - Falling Symbol)
+CE SM7500H0			White Circle - Halfwidth
+CF SC150000			Lira Sign, Hebrew
+D0 GT610002			Theta Small (Closed Form)
+D1 GT630000			Theta Small (Open Form)
+D2 SM9300H0			Musical Note - Halfwidth
+D3 SM9100H0			Two Musical Notes - Halfwidth
+D4 SM7800H0			Left-Right Arrow - Halfwidth
+D5 LD210008			d Caron Small
+D6 LL210008			l Caron Small
+D7 LL220008			L Caron Capital
+D8 LT210008			t Caron Small
+D9
+DA LM010001			alt-m alternative small letter m
+DB
+DC BO200000	U0000E42	Sara O
+DD BI100400			Sara I, Left Position
+DE BI200400			Sara Ii, Left Position
+DF SV0400H0			Solid Triangle, Inverted - Halfwidth
+E0 SV200000			Left Large Round Bracket
+E1 SV210000			Right Large Round Bracket
+E2
+E3 BA100400			Mai Han-Akat, Left Position
+E4 BA500000	U0000E43	Sara Ai maimuan
+E5 BA600000	U0000E44	Sara Ai maimalai
+E6
+E7 BE100000	U0000E47	Maitaikhu
+E8 BE100400			Maitaikhu, Left Position
+E9 BE400400			Yamakkan, Left Position
+EA BN400400			Nikkhahit, Left Position
+EB BQ300300			Phinthu, Low Position
+EC
+ED BT200001			Tho Than, without descender
+EE
+EF BU100400			Sara Ue, Left Position
+F0 BU200400			Sara Uee, Left Position
+F1 BU300300			Sara U, Low Position
+F2 BU400300			Sara Uu, Low Position
+F3
+F4 BY100001			Yo Ying, without descender
+F5
+F6 SA360000			Is Not An Element Of Symbol
+F7
+F8
+F9
+FA
+FB
+FC
+FD
+FE
+FF
+* END of table ------------------------------------------------------------------

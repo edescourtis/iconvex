@@ -1,0 +1,208 @@
+* ----------------------------------------------------------------------
+* Copyright IBM Corporation 1984, 1996. All rights reserved.
+* C-H 3-3220-050       : REGISTRY, Graphic Character Sets and Code Pages
+* Code Page (CPGID)    : 00293
+* Common Name          : APL (USA)
+* Registration Date    : 1984
+* Last Revision Date   : 1996
+* Default Encoding     : 1100
+* Code                 : EBCDIC
+* Maximal Character
+* Set (GCSGID)         : 01340
+* Other GCSGIDs        : 00380, 00615
+* ----------------------------------------------------------------------
+*- GCGID --------- GCGID Name ------------------------------------------
+40 SP010000        Space
+41 LA480000        A Line Below Capital/A Underscore (APL)
+42 LB480000        B Line Below Capital/B Underscore (APL)
+43 LC480000        C Line Below Capital/C Underscore (APL)
+44 LD480000        D Line Below Capital/D Underscore (APL)
+45 LE480000        E Line Below Capital/E Underscore (APL)
+46 LF480000        F Line Below Capital/F Underscore (APL)
+47 LG480000        G Line Below Capital/G Underscore (APL)
+48 LH480000        H Line Below Capital/H Underscore (APL)
+49 LI480000        I Line Below Capital/I Underscore (APL)
+4A SC040000        Cent Sign
+4B SL840000        Dot (APL)
+4C SL520000        Less (APL)
+4D SL670000        Left Parenthesis (APL)
+4E SL790000        Plus (APL)
+4F SM130000        Vertical Line/Logical OR
+50 SM030000        Ampersand
+51 LJ480000        J Line Below Capital/J Underscore (APL)
+52 LK480000        K Line Below Capital/K Underscore (APL)
+53 LL480000        L Line Below Capital/L Underscore (APL)
+54 LM480000        M Line Below Capital/M Underscore (APL)
+55 LN480000        N Line Below Capital/N Underscore (APL)
+56 LO480000        O Line Below Capital/O Underscore (APL)
+57 LP480000        P Line Below Capital/P Underscore (APL)
+58 LQ480000        Q Line Below Capital/Q Underscore (APL)
+59 LR480000        R Line Below Capital/R Underscore (APL)
+5A SP020000        Exclamation Point
+5B SC030000        Dollar Sign
+5C SL650000        Star (APL)
+5D SL680000        Right Parenthesis (APL)
+5E SL800000        Semicolon (APL)
+5F SM660000        Logical NOT/End Of Line Symbol
+60 SL690000        Bar (APL)
+61 SL760000        Slash (APL)
+62 LS480000        S Line Below Capital/S Underscore (APL)
+63 LT480000        T Line Below Capital/T Underscore (APL)
+64 LU480000        U Line Below Capital/U Underscore (APL)
+65 LV480000        V Line Below Capital/V Underscore (APL)
+66 LW480000        W Line Below Capital/W Underscore (APL)
+67 LX480000        X Line Below Capital/X Underscore (APL)
+68 LY480000        Y Line Below Capital/Y Underscore (APL)
+69 LZ480000        Z Line Below Capital/Z Underscore (APL)
+6A SM650000        Vertical Line, Broken
+6B SL850000        Comma (APL)
+6C SM020000        Percent Sign
+6D SL440000        Underbar (APL)
+6E SL530000        Greater (APL)
+6F SL700000        Query (APL)
+70 SL370000        Less Greater (APL)
+71 SL510000        Up Caret (APL)
+72 SL450000        Diaeresis (APL)
+73 SL270000        Quad Jot (APL)
+74 SL860000        Iota Underbar (APL)
+75 SL870000        Epsilon Underbar (APL)
+76 SL340000        Left Tack (APL)
+77 SL350000        Right Tack (APL)
+78 SL500000        Down Caret (APL)
+79 SD130000        Grave Accent
+7A SL830000        Colon (APL)
+7B SM010000        Number Sign
+7C SM050000        At Sign
+7D SL660000        Quote (APL)
+7E SL810000        Equal (APL)
+7F SP040000        Quotation Marks
+80 SL460000        Tilde (APL)
+81 LA010000        a Small
+82 LB010000        b Small
+83 LC010000        c Small
+84 LD010000        d Small
+85 LE010000        e Small
+86 LF010000        f Small
+87 LG010000        g Small
+88 LH010000        h Small
+89 LI010000        i Small
+8A SL610000        Up Arrow (APL)
+8B SL620000        Down Arrow (APL)
+8C SL560000        Not Greater (APL)
+8D SL010000        Up Stile (APL)
+8E SL020000        Down Stile (APL)
+8F SL600000        Right Arrow (APL)
+90 SL360000        Quad (APL)
+91 LJ010000        j Small
+92 LK010000        k Small
+93 LL010000        l Small
+94 LM010000        m Small
+95 LN010000        n Small
+96 LO010000        o Small
+97 LP010000        p Small
+98 LQ010000        q Small
+99 LR010000        r Small
+9A SL430000        Right Shoe (APL)
+9B SL420000        Left Shoe (APL)
+9C
+9D SL080000        Circle (APL)
+9E
+9F SL590000        Left Arrow (APL)
+A0 SL630000        Overbar (APL)
+A1 SD190000        Tilde Accent
+A2 LS010000        s Small
+A3 LT010000        t Small
+A4 LU010000        u Small
+A5 LV010000        v Small
+A6 LW010000        w Small
+A7 LX010000        x Small
+A8 LY010000        y Small
+A9 LZ010000        z Small
+AA SL400000        Up Shoe (APL)
+AB SL410000        Down Shoe (APL)
+AC SL230000        Down Tack (APL)
+AD SL770000        Left Bracket (APL)
+AE SL570000        Not Less (APL)
+AF SL250000        Jot (APL)
+B0 SL710000        Alpha (APL)
+B1 SL720000        Epsilon (APL)
+B2 SL730000        Iota (APL)
+B3 SL740000        Rho (APL)
+B4 SL750000        Omega (APL)
+B5
+B6 SL550000        Times (APL)
+B7 SL640000        Slope (APL)
+B8 SL540000        Divide (APL)
+B9
+BA SL030000        Del (APL)
+BB SL060000        Delta (APL)
+BC SL220000        Up Tack (APL)
+BD SL780000        Right Bracket (APL)
+BE SL820000        Not Equal (APL)
+BF SL380000        Stile (APL)
+C0 SM110000        Left Brace
+C1 LA020000        A Capital
+C2 LB020000        B Capital
+C3 LC020000        C Capital
+C4 LD020000        D Capital
+C5 LE020000        E Capital
+C6 LF020000        F Capital
+C7 LG020000        G Capital
+C8 LH020000        H Capital
+C9 LI020000        I Capital
+CA SL170000        Up Caret Tilde (APL)
+CB SL180000        Down Caret Tilde (APL)
+CC SL260000        Left Bracket Right Bracket (APL)
+CD SL090000        Circle Stile (APL)
+CE SL280000        Quad Slope (APL)
+CF SL100000        Circle Slope (APL)
+D0 SM140000        Right Brace
+D1 LJ020000        J Capital
+D2 LK020000        K Capital
+D3 LL020000        L Capital
+D4 LM020000        M Capital
+D5 LN020000        N Capital
+D6 LO020000        O Capital
+D7 LP020000        P Capital
+D8 LQ020000        Q Capital
+D9 LR020000        R Capital
+DA SL240000        Down Tack Up Tack (APL)
+DB SL580000        Quote Dot (APL)
+DC SL050000        Del Stile (APL)
+DD SL070000        Delta Stile (APL)
+DE SL130000        Quad Quote (APL)
+DF SL210000        Up Shoe Null (APL)
+E0 SM070000        Backslash
+E1 SL300000        Equal Underbar (APL)
+E2 LS020000        S Capital
+E3 LT020000        T Capital
+E4 LU020000        U Capital
+E5 LV020000        V Capital
+E6 LW020000        W Capital
+E7 LX020000        X Capital
+E8 LY020000        Y Capital
+E9 LZ020000        Z Capital
+EA SL150000        Slash Bar (APL)
+EB SL160000        Slope Bar (APL)
+EC SL320000        Diaeresis Dot (APL)
+ED SL120000        Circle Bar
+EE SL140000        Quad Divide (APL)
+EF SL200000        Up Tack Jot (APL)
+F0 ND100000        Zero
+F1 ND010000        One
+F2 ND020000        Two
+F3 ND030000        Three
+F4 ND040000        Four
+F5 ND050000        Five
+F6 ND060000        Six
+F7 ND070000        Seven
+F8 ND080000        Eight
+F9 ND090000        Nine
+FA
+FB SL040000        Del Tilde (APL)
+FC SL330000        Delta Underbar (APL)
+FD SL110000        Circle Star (APL)
+FE SL190000        Down Tack Jot (APL)
+FF
+/* END of table --------------------------------------------------------
+

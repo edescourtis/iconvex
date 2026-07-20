@@ -1,0 +1,43 @@
+Iconvex
+=======
+
+This work is a pure Elixir port based on GNU libiconv 1.19, released by the Free
+Software Foundation on 2026-03-07.
+
+Upstream source:
+https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.19.tar.gz
+
+Upstream archive SHA-256:
+88dd96a8c0464eca144fc791ae60cd31cd8ee78321e67397e25fc095c4a19aa6
+
+The packed mapping tables, aliases, transliteration data, conformance fixtures,
+and state-machine behavior are derived from GNU libiconv. GNU libiconv and this
+derived work are licensed under the GNU Lesser General Public License, version
+2.1 or (at your option) any later version. See LICENSE.
+
+The directory iconvex/test/fixtures/gnu-libiconv-1.19 is a
+267-file byte-exact upstream mirror plus one derived configured Makefile.
+Their complete 268-file aggregate
+content digest is:
+546c5b74a57687415f6bc67548dc1a190e9be54417b4df530addf7f9b96b095d
+
+That repository-only mirror includes tests/uniq-u.c, which is GPL-3.0-only. Its
+corresponding repository-only license text is iconvex/LICENSE.GPL-3.0. Both
+files are excluded from the Hex artifact; the GPL test utility is never
+compiled, linked, or used by the Iconvex runtime.
+
+The runtime implementation is native Elixir/BEAM code and does not link to or
+execute GNU libiconv.
+
+The directory iconvex/test/fixtures/gnu-libiconv-1.19-encodings contains
+byte-exact copies of GNU libiconv 1.19's seven encoding definition files plus
+output from the verified default-build `iconv -l`. Its aggregate content
+digest is:
+5eb5c6ed6dd8fe0ae6664a2bcf9c08f5353b6d692e72f2f3e7d75823c3256ad5
+
+iconvex/test/fixtures/all-unicode-codepoints.ucs4be is generated data containing
+every Unicode code point from U+0000 through U+10FFFF in ascending UCS-4BE
+order. Its 1,114,112 entries include the 1,112,064 Unicode scalar values and all
+2,048 surrogate code points, which are not scalar values. It has 4,456,448
+bytes and SHA-256:
+087f212baaa35562a226c5834e723620bb7d9f4103b76f9c7cbdaaff2d6cd67c

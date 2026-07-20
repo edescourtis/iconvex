@@ -1,0 +1,8 @@
+/_build*/
+/cover/
+/deps/
+/doc/
+/erl_crash.dump
+/iconvex-*.tar
+__pycache__/
+*.py[cod]

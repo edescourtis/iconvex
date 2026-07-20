@@ -1,0 +1,5 @@
+kind,fsw_domain,swu_domain,count,exact_rule
+marker,A|B|L|M|R,U+1D800..U+1D804,5,ordered one-to-one
+number,250..749,U+1D80C..U+1D9FF,500,swu=U+1D80C+(number-250)
+null,S00000,U+40000,1,one-to-one
+symbol,S10000..S38b07,U+40001..U+4F428,62504,id=((base-0x100)*96)+(fill*16)+rotation+1;swu=U+40000+id

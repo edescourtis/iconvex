@@ -1,0 +1,6 @@
+Iconvex Specs ICU Archive B
+Copyright 2026 Iconvex contributors
+
+Original provider code is LGPL-2.1-or-later. Generated historical ICU mapping
+tables derive from Unicode's ICU data repository and retain the Unicode License
+V3. Exact revision and source digests are published by iconvex_specs.

@@ -1,0 +1,179 @@
+Iconvex Specs
+Copyright 2026 Iconvex contributors
+
+Original Iconvex Specs library code is licensed under GNU Lesser General Public
+License, version 2.1 or (at your option) any later version, matching GNU
+libiconv's libraries. See LICENSE.
+
+Unicode-hosted Adobe and Apple mapping files and ICU-derived ISCII fixtures are
+distributed under the Unicode License V3 in LICENSE.UNICODE.
+
+Apache-licensed upstream fixtures and source material retain Apache License 2.0.
+See LICENSE.APACHE-2.0 and each source manifest. Their inclusion does not change
+license of original Iconvex implementation.
+
+The verbatim CTAN TeX'n'ANSI encoding vector retains LPPL-1.0-or-later terms,
+and the verbatim CTAN cmap 1.0j OT1 and OT1tt files retain
+LPPL-1.3c-or-later terms. Complete upstream license texts are shipped in
+`licenses/upstream/LPPL-1.0.txt` and `licenses/upstream/LPPL-1.3c.txt`.
+
+The pinned ICU 78.3 LMBCS algorithm, converter registry, and UCM mapping files
+retain the Unicode/ICU license recorded in `LICENSE.UNICODE` and their source
+metadata. They are immutable provenance and executable-oracle evidence; the
+native Elixir implementation remains LGPL-2.1-or-later.
+
+The pinned CPython 3.14.6 Punycode module is a repository-only executable test
+oracle under Python Software Foundation License Version 2. Its complete license
+and byte digest are retained in `priv/sources/rfc3492`; it is not linked, loaded,
+or called by the original LGPL-2.1-or-later runtime implementation.
+
+UTF-5 (`draft-jseng-utf5-01`) is implemented from the retained Internet-Draft,
+SHA-256 `12ae18367c110b5dcef9cc3f06b6ae40e60c8fde489fdd161f1bb98e3e5f2375`.
+The draft's authorship and unlimited-distribution statement remain intact; they
+are not replaced by the LGPL-2.1-or-later license of the independently written
+Elixir implementation.
+
+UTF-6 (`draft-ietf-idn-utf6-00`) is implemented from the retained Internet-Draft,
+SHA-256 `80033b5e41bc9f2fd01bddf99a300827b837f06ba93ef303bc54bc53df3755ca`.
+Its Internet Society copyright, all-rights-reserved notice, and unlimited-
+distribution statement are retained verbatim. The native Elixir implementation
+is separate original LGPL-2.1-or-later code.
+
+OpenJDK source-qualified codecs and research use four source sets from exact revision
+`6ae23a0d6574dc8139aea93ea3c562a7410fcb34`. Those repository-only files
+retain GPL-2.0-only terms and the Classpath Exception where their headers state
+it. Every source directory contains the exact upstream `LICENSE`,
+`ADDITIONAL_LICENSE_INFO`, URLs, and digests; all are excluded from Hex.
+
+The OpenJDK quarantine resolves the LGPL release blocker by removing all seven
+source-informed codecs, their importers, and generated runtime assets.
+`x-eucJP-Open`, `x-MS950-HKSCS-XP`, `x-windows-50220`,
+`x-windows-50221`, `x-windows-iso2022jp`,
+`x-ISO-2022-CN-GB`, and `x-ISO-2022-CN-CNS` are not registered and are not
+shipped. Their four upstream snapshots remain repository-only provenance under
+their recorded GPL-2.0-only-with-Classpath terms. This is a factual packaging
+and provenance disposition, not legal advice.
+
+Three separate Unicode signature profiles are shipped only under neutral
+`ICONVEX-` identities. Their newly authored LGPL-2.1-or-later wrapper delegates
+scalar validation and serialization to Iconvex Core and adds the documented
+signature/default-endian rules; it contains no vendor implementation source or
+mapping table. The profiles are custom transports, not Unicode-standard
+encoding schemes. Exact Unicode specification URLs and the release disposition
+ship in `priv/sources/iconvex-unicode-signature-profiles/SOURCE_METADATA.md`.
+
+CPython ISO-2022-JP-EXT sources at `v3.14.6` are repository-only evidence under
+Python Software Foundation License Version 2. They share the exact license text
+retained for the CPython Punycode oracle and are neither loaded nor called by
+the runtime.
+
+.NET x-Europa and x-cp50227 evidence at revision
+`dbb2178288bb4e1e8f1fde3958be3bd75573c459` retains Microsoft's MIT terms.
+The upstream code and binary table are repository-only; generated mapping facts
+and the independently written native codecs do not change ownership of those
+sources.
+
+glibc IBM423 evidence retains its upstream ownership. `ibm423.c` expressly uses
+LGPL-2.1-or-later and ships with the exact matching `COPYING.LIB`; the headerless
+glibc charmap is conservatively classified as repository-only evidence rather
+than being blanket-relicensed.
+
+UTF-8-MAC / HFS Plus evidence combines separately owned material. Apple's
+`libiconv_test.c` retains APSL-1.0 and the complete exact terms are vendored;
+`citrus_utf8mac.c` retains BSD-2-Clause; archived TN1150 remains Copyright 2018
+Apple Inc. All Rights Reserved; and Unicode 3.2 data retains Unicode License V3.
+Those upstream files are repository-only and excluded from Hex. The generated
+`priv/utf8_mac_manifest.etf` is shipped and contains decomposition keys and
+precomposition pairs derived from the BSD-2-Clause C tables plus Unicode 3.2
+data. Its complete attribution is shipped in `LICENSE.BSD-2-CLAUSE`. The APSL
+test oracle and its license text do not enter the Hex artifact.
+
+Microsoft Windows Best Fit source files retain the Unicode data-file terms
+recorded in `LICENSE.UNICODE`. They are repository-only generator evidence;
+the package contains generated mapping tables, not the original text files.
+
+IANA registry-derived families retain the ownership of their IANA submissions,
+RFC, Unicode data, and Artifex source evidence. The exact Amiga-1251 registry
+submission, historical ISO-10646 inputs, and normalized PCL evidence are
+repository-only; no absent upstream software license is inferred.
+
+The IBM Unicode CCSID reference page remains IBM-copyrighted, repository-only
+evidence and is excluded from Hex. No redistribution grant or LGPL coverage is
+inferred for that page.
+
+The Wang WISCII chart in document 800-1149-01 remains copyrighted vendor
+documentation. No redistribution license was identified, the PDF is not
+bundled, and no CC BY-SA or LGPL coverage is inferred for it. The separate
+Wikipedia revision used to bind chart glyphs to Unicode is attributed to that
+revision's contributors under CC BY-SA 4.0; its prose and wikitext are not
+bundled.
+
+The C-DAC GIST PASCII Version 1.0 PDF remains a copyrighted reference with no
+redistribution grant and is excluded from the repository package and Hex
+artifact. The package contains only an independently expressed factual byte
+table, explicit Iconvex projection policies, digest-bearing metadata, and the
+original LGPL-2.1-or-later native Elixir implementation. No ownership or
+license is inferred for the source PDF.
+
+These audited artifacts are not LGPL-covered upstream material. Their presence
+for repeatable source review does not alter the LGPL-2.1-or-later license of
+original Iconvex code; complete file-level dispositions are in `SOURCES.md` and
+each source directory's `SOURCE_METADATA.md`.
+
+The pinned IBM and Control Data punched-card manuals, University of Iowa
+reconstruction page, and Unicode L2/15-083R submission retain their respective
+copyright and submission terms. They are repository-only evidence and are not
+packaged as LGPL-covered runtime code. The independently implemented mapping
+facts and native Elixir engines remain LGPL-2.1-or-later.
+
+The IBM corporate GCGID registry pages and Digital Equipment Corporation's
+1994 printer programming manual used for CP310/907/1116/1117/1287/1288 retain
+their original notices and are repository-only provenance. The pinned ICU UCM
+join inputs retain the Unicode/ICU data-file terms. IBM/tnz's exact CP310 source
+table retains Apache-2.0. Hex artifacts ship only independently generated
+256-row mapping facts plus digest-bearing metadata; the pure Elixir runtime and
+generator remain LGPL-2.1-or-later.
+
+The generated historical ICU archive tables are distributed across three
+transparent `iconvex_specs_icu_archive_*` provider packages. That storage split
+does not alter mappings, public codec names, or upstream license terms.
+
+MARC-8 code tables are published by the Library of Congress. TSCII and BRF
+charmaps are sourced from the GNU C Library. Every source URL and byte digest is
+recorded in SOURCES.md and the generated manifests under priv.
+
+Archival ECMA, Digital Equipment Corporation, and Control Data Corporation
+manual scans retain their respective copyright notices. They are included only
+as pinned normative test fixtures for ECMA-1, DEC SIXBIT, DEC Special Graphic,
+DEC Technical, SI 960, DEC Hebrew 8-bit, the three distinct DEC RADIX-50 word
+formats, and CDC Display Code; exact URLs, cited pages, and SHA-256 digests are
+recorded in SOURCES.md.
+
+The Sperry Rand UP-7824 Rev. 1 and UP-7604 Rev. 1 manual scans used to define
+the UNIVAC 1100 Series and 4009 Display Console FIELDATA profiles retain their
+original 1971/1974 and 1968/1974 copyright notices and provide no permissive
+redistribution grant. The scans are not redistributed. Hex artifacts contain
+only independently transcribed factual tables, digest-bearing source metadata,
+and the original LGPL-2.1-or-later native Elixir implementation.
+
+The pinned Kermit `ckcuni.c` tables for DEC, Data General, HP, Siemens
+Nixdorf, QNX, Mazovia, Bulgarian PC, and Hebrew-7 profiles are used as exact
+source-versioned mappings or independent historical cross-checks and retain
+their BSD-3-Clause terms in
+`priv/sources/dec-terminal-character-sets/kermit/COPYING`. Its inclusion does
+not change the LGPL-2.1-or-later license of the Iconvex implementation.
+
+The complete KOI8 Unified Cyrillic 2.1 mapping used by `KOI8-F` is copyright
+2008 Department of Mathematical Sciences, New Mexico State University, and is
+distributed under its MIT-style permission notice. The notice is retained in
+`priv/sources/koi8-f/KOI8UNI.TXT` and reproduced in `LICENSE.MIT-NMSU`. The
+native Elixir codec implementation remains LGPL-2.1-or-later.
+
+The compact Unihan 17.0.0 `kMainlandTelegraph`, `kTaiwanTelegraph`, and `kGB3`
+mapping facts are derived from Unicode data and retain the Unicode License V3
+in `LICENSE.UNICODE`. The original archive is not packaged. The packaged
+`kGB3` CSV records the exact provisional property values; its decimal-token
+mapping and raw GL row/cell projection are source-qualified rather than aliases
+for a published GB 13131 transport. Iconvex's property-token engines, GL codec,
+and explicit Taiwan reverse/lossless policies remain original
+LGPL-2.1-or-later implementation code.

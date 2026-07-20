@@ -1,0 +1,272 @@
+* ----------------------------------------------------------------------
+* Copyright IBM Corporation 2000. All rights reserved.
+* C-H 3-3220-050       : REGISTRY, Graphic Character Sets and Code Pages
+* Code Page (CPGID)    : 01287
+* Common Name          : DEC Greek 8-Bit
+* Registration Date    : 2000
+* Last Revision Date   :
+* Default Encoding     : 4100
+* Code                 : ISO 8-Bit
+* Maximal Character
+* Set (GCSGID)         : 01437
+* Other GCSGIDs        :
+* ----------------------------------------------------------------------
+*- GCGID --------- GCGID Name ------------------------------------------
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+0A
+0B
+0C
+0D
+0E
+0F
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+1A
+1B
+1C
+1D
+1E
+1F
+20 SP010000        Space
+21 SP020000        Exclamation Point
+22 SP040000        Quotation Marks
+23 SM010000        Number Sign
+24 SC030000        Dollar Sign
+25 SM020000        Percent Sign
+26 SM030000        Ampersand
+27 SP050000        Apostrophe
+28 SP060000        Left Parenthesis
+29 SP070000        Right Parenthesis
+2A SM040000        Asterisk
+2B SA010000        Plus Sign
+2C SP080000        Comma
+2D SP100000        Hyphen/Minus Sign
+2E SP110000        Period/Full Stop
+2F SP120000        Slash
+30 ND100000        Zero
+31 ND010000        One
+32 ND020000        Two
+33 ND030000        Three
+34 ND040000        Four
+35 ND050000        Five
+36 ND060000        Six
+37 ND070000        Seven
+38 ND080000        Eight
+39 ND090000        Nine
+3A SP130000        Colon
+3B SP140000        Semicolon
+3C SA030000        Less Than Sign/Greater Than Sign (Arabic)
+3D SA040000        Equal Sign
+3E SA050000        Greater Than Sign/Less Than Sign (Arabic)
+3F SP150000        Question Mark
+40 SM050000        At Sign
+41 LA020000        A Capital
+42 LB020000        B Capital
+43 LC020000        C Capital
+44 LD020000        D Capital
+45 LE020000        E Capital
+46 LF020000        F Capital
+47 LG020000        G Capital
+48 LH020000        H Capital
+49 LI020000        I Capital
+4A LJ020000        J Capital
+4B LK020000        K Capital
+4C LL020000        L Capital
+4D LM020000        M Capital
+4E LN020000        N Capital
+4F LO020000        O Capital
+50 LP020000        P Capital
+51 LQ020000        Q Capital
+52 LR020000        R Capital
+53 LS020000        S Capital
+54 LT020000        T Capital
+55 LU020000        U Capital
+56 LV020000        V Capital
+57 LW020000        W Capital
+58 LX020000        X Capital
+59 LY020000        Y Capital
+5A LZ020000        Z Capital
+5B SM060000        Left Bracket
+5C SM070000        Backslash
+5D SM080000        Right Bracket
+5E SD150000        Circumflex Accent
+5F SP090000        Underline/Continuous Underscore
+60 SD130000        Grave Accent
+61 LA010000        a Small
+62 LB010000        b Small
+63 LC010000        c Small
+64 LD010000        d Small
+65 LE010000        e Small
+66 LF010000        f Small
+67 LG010000        g Small
+68 LH010000        h Small
+69 LI010000        i Small
+6A LJ010000        j Small
+6B LK010000        k Small
+6C LL010000        l Small
+6D LM010000        m Small
+6E LN010000        n Small
+6F LO010000        o Small
+70 LP010000        p Small
+71 LQ010000        q Small
+72 LR010000        r Small
+73 LS010000        s Small
+74 LT010000        t Small
+75 LU010000        u Small
+76 LV010000        v Small
+77 LW010000        w Small
+78 LX010000        x Small
+79 LY010000        y Small
+7A LZ010000        z Small
+7B SM110000        Left Brace
+7C SM130000        Vertical Line/Logical OR
+7D SM140000        Right Brace
+7E SD190000        Tilde Accent
+7F
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+8A
+8B
+8C
+8D
+8E
+8F
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+9A
+9B
+9C
+9D
+9E
+9F
+A0 SP300000        Required Space
+A1 SP030000        Exclamation Point, Inverted
+A2 SC040000        Cent Sign
+A3 SC020000        Pound Sterling Sign
+A4
+A5 SC050000        Yen Sign
+A6
+A7 SM240000        Section Symbol (USA)/Paragraph Symbol (Europe)
+A8 SC010000        International Currency Symbol
+A9 SM520000        Copyright Symbol
+AA SM210000        Ordinal Indicator, Feminine
+AB SP170000        Left Angle Quotes
+AC
+AD
+AE
+AF
+B0 SM190000        Degree Symbol
+B1 SA020000        Plus or Minus Sign
+B2 ND021000        Two Superscript
+B3 ND031000        Three Superscript
+B4
+B5 SM170000        Micro Symbol
+B6 SM250000        Paragraph Symbol (USA)
+B7 SD630000        Middle Dot
+B8
+B9 ND011000        One Superscript
+BA SM200000        Ordinal Indicator, Masculine
+BB SP180000        Right Angle Quotes
+BC NF040000        One Quarter
+BD NF010000        One Half
+BE
+BF SP160000        Question Mark, Inverted
+C0 GI170000        Iota Diaeresis Small
+C1 GA020000        Alpha Capital
+C2 GB020000        Beta Capital
+C3 GG020000        Gamma Capital
+C4 GD020000        Delta Capital
+C5 GE020000        Epsilon Capital
+C6 GZ020000        Zeta Capital
+C7 GE320000        Eta Capital
+C8 GT620000        Theta Capital
+C9 GI020000        Iota Capital
+CA GK020000        Kappa Capital
+CB GL020000        Lambda Capital
+CC GM020000        Mu Capital
+CD GN020000        Nu Capital
+CE GX020000        Xi Capital
+CF GO020000        Omicron Capital
+D0
+D1 GP020000        Pi Capital
+D2 GR020000        Rho Capital
+D3 GS020000        Sigma Capital
+D4 GT020000        Tau Capital
+D5 GU020000        Upsilon Capital
+D6 GF020000        Phi Capital
+D7 GH020000        Chi Capital
+D8 GP620000        Psi Capital
+D9 GO320000        Omega Capital
+DA GA110000        Alpha Acute Small
+DB GE110000        Epsilon Acute Small
+DC GE710000        Eta Acute Small
+DD GI110000        Iota Acute Small
+DE
+DF GO110000        Omicron Acute Small
+E0 GU170000        Upsilon Diaeresis Small
+E1 GA010000        Alpha Small
+E2 GB010000        Beta Small
+E3 GG010000        Gamma Small
+E4 GD010000        Delta Small
+E5 GE010000        Epsilon Small
+E6 GZ010000        Zeta Small
+E7 GE310000        Eta Small
+E8 GT610000        Theta Small
+E9 GI010000        Iota Small
+EA GK010000        Kappa Small
+EB GL010000        Lambda Small
+EC GM010000        Mu Small
+ED GN010000        Nu Small
+EE GX010000        Xi Small
+EF GO010000        Omicron Small
+F0
+F1 GP010000        Pi Small
+F2 GR010000        Rho Small
+F3 GS010000        Sigma Small
+F4 GT010000        Tau Small
+F5 GU010000        Upsilon Small
+F6 GF010000        Phi Small
+F7 GH010000        Chi Small
+F8 GP610000        Psi Small
+F9 GO310000        Omega Small
+FA GS610000        Sigma Small (Final Form)
+FB GU110000        Upsilon Acute Small
+FC GO710000        Omega Acute Small
+FD SD110000        Acute Accent
+FE
+FF
+/* END of table --------------------------------------------------------
+

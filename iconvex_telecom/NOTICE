@@ -1,0 +1,40 @@
+Iconvex Telecom
+Copyright 2026 Iconvex contributors
+
+Original Iconvex Telecom library code is licensed under GNU Lesser General
+Public License, version 2.1 or (at your option) any later version, matching GNU
+libiconv's libraries. See LICENSE.
+
+GSM 03.38 mapping data is generated from the Android Open Source Project
+GsmAlphabet.java implementation, licensed under Apache License 2.0, and checked
+against 3GPP TS 23.038 Release 19 / ETSI TS 123 038 V19.0.0.
+
+Apache-licensed material retains Apache License 2.0; see
+LICENSE.APACHE-2.0. It does not change license of original Iconvex
+implementation.
+
+The test fixture test/fixtures/gsm-03.38-2009.ucm is from the Unicode ICU
+project and is distributed under the Unicode License V3 in LICENSE.UNICODE.
+
+Repository-only telecom research evidence
+-----------------------------------------
+
+The development tree retains standards PDFs, historical scans, derived
+renderings and text extractions, and two web-page captures under tmp/. Their
+exact digests, source relationships, ownership, and retrieval URLs are recorded
+in SOURCE_PROVENANCE.md. International Telecommunication Union standards and
+historical material remain owned and published by the International
+Telecommunication Union. No redistribution license is inferred from public
+availability or local transformation.
+
+All tmp/ research evidence is repository-only and excluded from the Hex
+package. No upstream artifact is relicensed under Iconvex Telecom's LGPL
+license.
+
+IBM Six-Bit Transcode source boundary
+-------------------------------------
+
+The package includes original normalized factual CSV transcriptions and source
+metadata for IBM publications GA27-3005-3 and GA27-3004-2. The copyrighted IBM
+manual PDFs are not distributed, and public availability is not treated as a
+redistribution grant. See priv/sources/ibm-six-bit-transcode/SOURCE_METADATA.md.
