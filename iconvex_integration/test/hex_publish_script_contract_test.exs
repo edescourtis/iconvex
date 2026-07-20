@@ -29,7 +29,7 @@ defmodule IconvexIntegration.HexPublishScriptContractTest do
     assert script =~ "EXPECTED_HEX_VERSION=\"2.2.1\""
 
     assert script =~
-             "EXPECTED_MANIFEST_SHA256=\"20952bda49efd909ec11b761d66d079e2a9563b41124c5b3099d36458f6a7636\""
+             "EXPECTED_MANIFEST_SHA256=\"1411f0bde757a4bd2c242814bcdfa23829d36ad40e6e9bb6b80d01ff1339e528\""
 
     assert script =~ "export HEX_API_URL=\"https://hex.pm/api\""
     assert script =~ "export HEX_UNSAFE_HTTPS=\"0\""
@@ -69,7 +69,7 @@ defmodule IconvexIntegration.HexPublishScriptContractTest do
            end)
   end
 
-  test "live mode publishes in dependency order only after every preflight succeeds" do
+  test "live mode publishes in dependency order, interleaving dry-run and publish" do
     fixture = fixture!()
 
     {output, 0} =
@@ -79,27 +79,34 @@ defmodule IconvexIntegration.HexPublishScriptContractTest do
 
     assert output =~ "PUBLISH COMPLETE: 7 packages"
     assert actions(fixture.log, "PUBLISH") == @packages
+    assert actions(fixture.log, "DRY_RUN") == @packages
     assert actions(fixture.log, "BUILD") == @packages ++ @packages
 
     assert actions(fixture.log, "API_PACKAGE") == @packages ++ @packages
     assert actions(fixture.log, "API_RELEASE") == @packages ++ @packages
 
     lines = File.read!(fixture.log) |> String.split("\n", trim: true)
-    last_dry_run = Enum.find_index(Enum.reverse(lines), &String.starts_with?(&1, "DRY_RUN "))
-    first_publish = Enum.find_index(lines, &String.starts_with?(&1, "PUBLISH "))
 
-    assert length(lines) - 1 - last_dry_run < first_publish
-
-    live_actions =
+    # The up-front source-artifact verification builds every package first; the
+    # live phase then interleaves reverify-build, dry-run, and publish for each
+    # package in dependency order, so each dependent is dry-run and published
+    # only after its ancestors are live.
+    interleaved =
       lines
-      |> Enum.drop(length(lines) - last_dry_run)
-      |> Enum.filter(&(String.starts_with?(&1, "BUILD ") or String.starts_with?(&1, "PUBLISH ")))
+      |> Enum.filter(
+        &(String.starts_with?(&1, "BUILD ") or String.starts_with?(&1, "DRY_RUN ") or
+            String.starts_with?(&1, "PUBLISH "))
+      )
+      |> Enum.drop(length(@packages))
 
-    assert live_actions ==
+    assert interleaved ==
              Enum.flat_map(@packages, fn package ->
-               ["BUILD #{package}", "PUBLISH #{package}"]
+               ["BUILD #{package}", "DRY_RUN #{package}", "PUBLISH #{package}"]
              end)
 
+    # Every remote preflight query still completes before any package is
+    # published, so ownership and same-version collisions abort with zero
+    # mutation.
     first_publish = Enum.find_index(lines, &String.starts_with?(&1, "PUBLISH "))
 
     assert lines
@@ -242,7 +249,7 @@ defmodule IconvexIntegration.HexPublishScriptContractTest do
     assert actions(fixture.log, "PUBLISH") == []
   end
 
-  test "Nth dry-run failure causes zero publishes" do
+  test "an Nth dry-run failure aborts before publishing that package or any later one" do
     fixture = fixture!()
 
     {output, status} =
@@ -253,8 +260,11 @@ defmodule IconvexIntegration.HexPublishScriptContractTest do
 
     assert status != 0
     assert output =~ "injected dry-run failure 4"
+    # Interleaved release: each package is dry-run immediately before it is
+    # published, so a failure at package four stops the release with the first
+    # three already published and no later package touched.
     assert actions(fixture.log, "DRY_RUN") == Enum.take(@packages, 4)
-    assert actions(fixture.log, "PUBLISH") == []
+    assert actions(fixture.log, "PUBLISH") == Enum.take(@packages, 3)
   end
 
   test "unexpected Hex archive version causes zero package mutation" do
@@ -368,7 +378,9 @@ defmodule IconvexIntegration.HexPublishScriptContractTest do
 
     assert status != 0
     assert output =~ "live publish confirmation required"
-    assert actions(fixture.log, "DRY_RUN") == @packages
+    # The confirmation gate is checked before any per-package dry-run or publish,
+    # so a missing confirmation mutates nothing and dry-runs nothing.
+    assert actions(fixture.log, "DRY_RUN") == []
     assert actions(fixture.log, "PUBLISH") == []
   end
 
@@ -437,6 +449,10 @@ defmodule IconvexIntegration.HexPublishScriptContractTest do
 
     if [[ "$*" == "hex --version" ]]; then
       printf 'Hex v%s\n' "${FAKE_HEX_VERSION:-2.2.1}"
+      exit 0
+    fi
+
+    if [[ "$*" == "deps.get" ]]; then
       exit 0
     fi
 

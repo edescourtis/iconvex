@@ -8,7 +8,7 @@ EXPECTED_VERSION="0.1.0"
 EXPECTED_ELIXIR_VERSION="1.19.5"
 EXPECTED_OTP_VERSION="28"
 EXPECTED_HEX_VERSION="2.2.1"
-EXPECTED_MANIFEST_SHA256="20952bda49efd909ec11b761d66d079e2a9563b41124c5b3099d36458f6a7636"
+EXPECTED_MANIFEST_SHA256="1411f0bde757a4bd2c242814bcdfa23829d36ad40e6e9bb6b80d01ff1339e528"
 DEFAULT_ASDF_DATA_DIR="${ASDF_DATA_DIR:-${HOME}/.asdf}"
 DEFAULT_ELIXIR_BIN="${DEFAULT_ASDF_DATA_DIR}/installs/elixir/1.19.5-otp-28/bin/elixir"
 DEFAULT_MIX_BIN="${DEFAULT_ASDF_DATA_DIR}/installs/elixir/1.19.5-otp-28/bin/mix"
@@ -38,6 +38,7 @@ CURL_BIN="${ICONVEX_PUBLISH_CURL_BIN:-}"
 JQ_BIN="${ICONVEX_PUBLISH_JQ_BIN:-}"
 VERIFY_ATTEMPTS="${ICONVEX_HEX_VERIFY_ATTEMPTS:-12}"
 VERIFY_DELAY_SECONDS="${ICONVEX_HEX_VERIFY_DELAY_SECONDS:-2}"
+HEX_LOCAL_PASSWORD="${ICONVEX_HEX_LOCAL_PASSWORD:-}"
 PUBLISH=false
 PREFLIGHT_DIR=""
 
@@ -65,6 +66,7 @@ Environment overrides:
   ICONVEX_PUBLISH_ERLANG_BIN_DIR    pinned Erlang bin directory
   ICONVEX_PUBLISH_CURL_BIN          curl executable used for Hex API reads
   ICONVEX_PUBLISH_JQ_BIN            jq executable used for Hex API validation
+  ICONVEX_HEX_LOCAL_PASSWORD        local Hex key password (fed to mix; unset = prompt)
   ICONVEX_HEX_VERIFY_ATTEMPTS       post-publish API attempts (default: 12)
   ICONVEX_HEX_VERIFY_DELAY_SECONDS  delay between attempts (default: 2)
 
@@ -195,7 +197,11 @@ run_source_mix() {
   (
     cd "${WORKSPACE}/${package}"
     unset ICONVEX_PATH ICONVEX_ARCHIVE_PATH
-    "${MIX_BIN}" "$@"
+    if [[ -n "${HEX_LOCAL_PASSWORD}" ]]; then
+      printf '%s\n' "${HEX_LOCAL_PASSWORD}" | "${MIX_BIN}" "$@"
+    else
+      "${MIX_BIN}" "$@"
+    fi
   )
 }
 
@@ -469,8 +475,35 @@ run_frozen_mix() {
     cd "${FROZEN_WORKSPACE}/${package}"
     unset ICONVEX_PATH ICONVEX_ARCHIVE_PATH
     export MIX_BUILD_PATH="${PREFLIGHT_DIR}/mix-build/${package}"
-    "${MIX_BIN}" "$@"
+    if [[ -n "${HEX_LOCAL_PASSWORD}" ]]; then
+      printf '%s\n' "${HEX_LOCAL_PASSWORD}" | "${MIX_BIN}" "$@"
+    else
+      "${MIX_BIN}" "$@"
+    fi
   )
+}
+
+# Fetch a frozen package's published dependencies from Hex. During an
+# interleaved live release a dependent is only reached after its ancestors are
+# published and confirmed on the Hex API; the repository registry can still lag
+# that confirmation briefly, so deps.get is retried on the same schedule as the
+# post-publish readback.
+resolve_frozen_deps() {
+  local package="$1"
+  local attempts="$2"
+  local attempt=1
+
+  while [[ "${attempt}" -le "${attempts}" ]]; do
+    if run_frozen_mix "${package}" deps.get >/dev/null 2>&1; then
+      return 0
+    fi
+    if [[ "${attempt}" -lt "${attempts}" ]]; then
+      sleep "${VERIFY_DELAY_SECONDS}"
+    fi
+    attempt=$((attempt + 1))
+  done
+
+  return 1
 }
 
 PROJECT_PROBE='config = Mix.Project.config(); package = Keyword.get(config, :package, []); links = Keyword.get(package, :links, %{}); IO.puts("ICONVEX_APP=#{config[:app]}"); IO.puts("ICONVEX_VERSION=#{config[:version]}"); IO.puts("ICONVEX_SOURCE_URL=#{config[:source_url] || ""}"); links |> Map.values() |> Enum.filter(&(is_binary(&1) and String.contains?(String.downcase(&1), "github.com"))) |> Enum.each(&IO.puts("ICONVEX_GITHUB_URL=#{&1}"))'
@@ -519,11 +552,6 @@ for package in "${PACKAGES[@]}"; do
   info "source artifact verified: ${filename} ${built_checksum}"
 done
 
-for package in "${PACKAGES[@]}"; do
-  info "preflight ${package}: ${DRY_RUN_COMMAND}"
-  run_frozen_mix "${package}" hex.publish package --dry-run --yes
-done
-
 REMOTE_PREFLIGHT_DIR="${PREFLIGHT_DIR}/hex-api-preflight"
 REMOTE_SKIP_FILE="${PREFLIGHT_DIR}/already-published-packages"
 : > "${REMOTE_SKIP_FILE}"
@@ -551,6 +579,19 @@ for package in "${PACKAGES[@]}"; do
 done
 
 if [[ "${PUBLISH}" != true ]]; then
+  # Dependents can only be dry-run once their Iconvex dependencies exist on Hex.
+  # On a greenfield tree those siblings are not published yet, so a dependent's
+  # dependency fetch fails; that is reported as a deferral rather than a hard
+  # error. A live --publish run dry-runs each package just before publishing it,
+  # after its ancestors are live.
+  for package in "${PACKAGES[@]}"; do
+    if resolve_frozen_deps "${package}" 1; then
+      info "preflight ${package}: ${DRY_RUN_COMMAND}"
+      run_frozen_mix "${package}" hex.publish package --dry-run --yes
+    else
+      info "preflight deferred; dependencies not yet on Hex: ${package}"
+    fi
+  done
   info "DRY RUN COMPLETE: no package published"
   exit 0
 fi
@@ -589,6 +630,12 @@ for package in "${PACKAGES[@]}"; do
   reverified_checksum="$(sha256_file "${reverified_tar}")"
   [[ "${reverified_checksum}" == "${candidate_tar_sha256}" ]] ||
     fail "frozen source changed before live publish: ${filename}"
+
+  resolve_frozen_deps "${package}" "${VERIFY_ATTEMPTS}" ||
+    fail "dependencies for ${package} ${EXPECTED_VERSION} are not resolvable from Hex"
+
+  info "preflight ${package}: ${DRY_RUN_COMMAND}"
+  run_frozen_mix "${package}" hex.publish package --dry-run --yes
 
   info "publishing ${package}: ${PUBLISH_COMMAND}"
   run_frozen_mix "${package}" hex.publish package --yes

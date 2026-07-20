@@ -47,8 +47,8 @@ defmodule IconvexSpecs.MixProject do
     [
       licenses: [
         "LGPL-2.1-or-later",
-        "LPPL-1.0-or-later",
-        "LPPL-1.3c-or-later",
+        "LPPL-1.0",
+        "LPPL-1.3c",
         "Apache-2.0",
         "Unicode-3.0",
         "BSD-2-Clause",
