@@ -23,6 +23,8 @@ defmodule IconvexIntegration.AggregateCIWorkflowContractTest do
     assert workflow =~ "mix deps.get --check-locked"
     refute Regex.match?(~r/^\s*- run: mix deps\.get\s*$/m, workflow)
     assert workflow =~ "mix compile --warnings-as-errors"
+    refute workflow =~ ~s("28.0")
+    assert length(Regex.scan(~r/"28\.3"/, workflow)) == 5
     assert workflow =~ "core-coverage:"
     refute Regex.match?(~r/^\s*- run: mix test --cover$/m, workflow)
     assert length(Regex.scan(~r/^\s*- run: mix test --cover --seed 0$/m, workflow)) == 1

@@ -466,6 +466,13 @@
   RED/GREEN log SHA-256 values
   `72a641edca024c05fd088fb5f112f844d811a3d6281eeb5e2b2507c7bd569383`
   and `740d6c8cda10f8ded6da0fb5b9a578e6ab7de313f59bb7555732ffdee5891d48`.
+- The replacement clean-Linux run then exposed that setup-beam's exact OTP
+  28.0 release prints a Regex recompilation warning to generated-document
+  stdout. An expectation first rejected every `28.0` pin and required all five
+  OTP 28 jobs to use the publisher baseline, OTP 28.3. The focused RED/GREEN
+  log SHA-256 values are
+  `7e136e257fcf35ae998a208c89f7d01c633fcf6d83b3dc46de174294b64bae98`
+  and `b7810fdcf3549b96db782a12258b81f95e077b6b10f0c9358d0088b83f2209a4`.
 - Exact local workflow commands pass Integration 49/49, Core compatibility
   623/623, and Core coverage 623/623 at 93.30%. Their log SHA-256 values are
   `02e205d35ba18d06bfff25803365d67393626a398625ebe952e2a509b310865f`,
