@@ -441,3 +441,35 @@
   authentication; its log SHA-256 is
   `5710203237f85a13198b846a7e82cc9073c2f72cc89328c355111583a24cdd4a`.
   No dry-run or live Hex publication was executed.
+
+## Cycle 27 — aggregate CI measurement isolation
+
+- RED used the first public GitHub Actions run to exercise the aggregate
+  workflow on clean Linux workers. Integration had no formatter inputs;
+  Extras and Telecom completed all 134 and 163 behavioral tests before their
+  package-wide 90% coverage thresholds rejected 61.69% and 79.25%; and OTP 26
+  cover instrumentation distorted an absolute reduction measurement and made
+  a global atom-count assertion order-sensitive. The first expectation-first
+  workflow contract failed 2/2 with log SHA-256
+  `7e5f66370db2e6b2dbea5a524de4f6bfae28097b1d64196c5bdbe9018a2d87ae`.
+- A second RED required compatibility tests to run uninstrumented on every OTP
+  pair and coverage to be enforced once on OTP 28. The unchanged workflow
+  failed 1/2; its log SHA-256 is
+  `3e6a0004faee328d9a5b63daf7223ba4ddd70ff22556bb26fea7718f79ec3e8c`.
+- GREEN defines Integration formatter inputs, runs every extension and
+  Integration suite with deterministic seed zero, runs the complete Core suite
+  uninstrumented on the OTP compatibility matrix, and adds a dedicated OTP 28
+  coverage job. The focused contract passes 2/2; its log SHA-256 is
+  `ae0191ee4fc9dc0af6aec34b90909eceac98798f8840d701091112f23c77aad1`.
+- Final review required the Integration formatter to include its own config.
+  That expectation failed 1/2 before implementation and then passed 2/2 with
+  RED/GREEN log SHA-256 values
+  `72a641edca024c05fd088fb5f112f844d811a3d6281eeb5e2b2507c7bd569383`
+  and `740d6c8cda10f8ded6da0fb5b9a578e6ab7de313f59bb7555732ffdee5891d48`.
+- Exact local workflow commands pass Integration 49/49, Core compatibility
+  623/623, and Core coverage 623/623 at 93.30%. Their log SHA-256 values are
+  `02e205d35ba18d06bfff25803365d67393626a398625ebe952e2a509b310865f`,
+  `ebf5b29ad88f129c4944c0d09492f5e468c39a247e8ce5154c280c2fa473ba09`,
+  and `f092e95f1a0c337d9932c493b17fec8239eb44957297ef8ce9c2fc12779f44f9`.
+  Core sources, tests, saved evidence, and all seven frozen Hex artifacts remain
+  byte-identical.

@@ -43,8 +43,10 @@ defmodule IconvexIntegration.HexPublishScriptContractTest do
     assert script =~ "candidate_tar_sha256"
     assert script =~ "complete outer package"
     assert script =~ "ICONVEX_SOURCE_URL="
+
     assert script =~
              ~S(DEFAULT_RELEASE_ROOT="${DEFAULT_WORKSPACE}/iconvex_release_0.1.0")
+
     assert script =~ "mix hex.publish package --dry-run --yes"
     assert script =~ "mix hex.publish package --yes"
   end

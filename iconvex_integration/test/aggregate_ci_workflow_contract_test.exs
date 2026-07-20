@@ -3,6 +3,7 @@ defmodule IconvexIntegration.AggregateCIWorkflowContractTest do
 
   @workspace Path.expand("../..", __DIR__)
   @workflow Path.join(@workspace, ".github/workflows/iconvex.yml")
+  @formatter Path.join(@workspace, "iconvex_integration/.formatter.exs")
   @packages ~w(
     iconvex_extras
     iconvex_telecom
@@ -22,7 +23,10 @@ defmodule IconvexIntegration.AggregateCIWorkflowContractTest do
     assert workflow =~ "mix deps.get --check-locked"
     refute Regex.match?(~r/^\s*- run: mix deps\.get\s*$/m, workflow)
     assert workflow =~ "mix compile --warnings-as-errors"
-    assert workflow =~ "mix test --cover"
+    assert workflow =~ "core-coverage:"
+    refute Regex.match?(~r/^\s*- run: mix test --cover$/m, workflow)
+    assert length(Regex.scan(~r/^\s*- run: mix test --cover --seed 0$/m, workflow)) == 1
+    assert length(Regex.scan(~r/^\s*- run: mix test --seed 0$/m, workflow)) == 2
     assert workflow =~ "elixir tools/release_check.exs"
     assert workflow =~ "mix docs --warnings-as-errors"
 
@@ -31,5 +35,16 @@ defmodule IconvexIntegration.AggregateCIWorkflowContractTest do
     for package <- @packages do
       assert workflow =~ "directory: #{package}"
     end
+  end
+
+  test "RED: integration formatting is defined for every maintained source file" do
+    assert File.regular?(@formatter)
+
+    {formatter, _binding} = Code.eval_file(@formatter)
+
+    assert Keyword.fetch!(formatter, :inputs) == [
+             "{mix,.formatter}.exs",
+             "{test,tools}/**/*.{ex,exs}"
+           ]
   end
 end
