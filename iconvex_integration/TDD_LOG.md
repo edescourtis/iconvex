@@ -473,6 +473,17 @@
   log SHA-256 values are
   `7e136e257fcf35ae998a208c89f7d01c633fcf6d83b3dc46de174294b64bae98`
   and `b7810fdcf3549b96db782a12258b81f95e077b6b10f0c9358d0088b83f2209a4`.
+- Repeated clean runners also exposed a one-sample quick-benchmark flake: the
+  same Specs tree passed 987/987 once, but two other runs measured the IBM 1401
+  16BE decode at 31.57x and 31.59x from 22–23 microsecond reference samples.
+  The gate remains exactly 30x. RED first required five timing trials and a
+  16,384-character quick corpus; GREEN takes their median instead of treating
+  one sub-millisecond sample as release evidence. The focused RED/GREEN log
+  SHA-256 values are
+  `d3eaf1a683d0d68cfc2108c0b01cc6cd63e4346c684e7080c78fae318ed2b58d`
+  and `01dfc29419635b35dbed64754bcb454d5e1fc3b06efd9069b85e13b4407c4be1`.
+  Three consecutive full 48-gate quick runs pass; their combined log SHA-256
+  is `70e1ac0ce5d6c5824ceea16fa631ab0ebf6da7c581ac712ce3052ae67f46050e`.
 - Exact local workflow commands pass Integration 49/49, Core compatibility
   623/623, and Core coverage 623/623 at 93.30%. Their log SHA-256 values are
   `02e205d35ba18d06bfff25803365d67393626a398625ebe952e2a509b310865f`,

@@ -48,6 +48,8 @@ defmodule Iconvex.Specs.PunchedCardBenchmarkTest do
     assert source =~ "canonical_maps.csv"
     assert source =~ "decode_aliases.csv"
     assert source =~ "@benchmark_alphabet_units 64"
+    assert source =~ "@iterations if(@quick, do: 5, else: 7)"
+    assert source =~ "@sample_repetitions if(@quick, do: 256, else: 1_024)"
     assert source =~ "reference_evidence(profile_id)"
     assert source =~ "complete_coverage_alphabet(evidence.canonical_rows)"
     assert source =~ "MapSet.subset?(MapSet.new(codepoints), MapSet.new(alphabet))"

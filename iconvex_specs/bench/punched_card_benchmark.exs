@@ -3,9 +3,9 @@ defmodule Iconvex.Specs.PunchedCardBenchmark do
   alias Iconvex.Packed.LSB
 
   @quick "--quick" in System.argv()
-  @iterations if(@quick, do: 1, else: 7)
+  @iterations if(@quick, do: 5, else: 7)
   @warmups if(@quick, do: 1, else: 2)
-  @sample_repetitions if(@quick, do: 64, else: 1_024)
+  @sample_repetitions if(@quick, do: 256, else: 1_024)
   @benchmark_alphabet_units 64
   @scaling_batch if(@quick, do: 10, else: 100)
   @reduction_samples 3
